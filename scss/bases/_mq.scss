@@ -1,0 +1,157 @@
+/* >480px celulares */
+/* 480<960px tables */
+/* 960<1328px pc */
+img{
+    max-width: 100%;
+}
+
+/*  */    
+@media  (min-wsasidth: 768px) and (max-width: 1024px) {
+
+@media (min-width: 1024px) {
+
+/* NOTICIAS */
+.section__grid{
+    h2{
+        font-size: 2vw;
+    }
+    .grid__container{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .grid__container-item{
+        margin: 1.5rem;
+            .subgrid-item{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                h3{
+                    font-size: 2vw;
+                    grid-column: span 3;
+                }
+                h4{
+                    font-size: 1.5vw;
+                    grid-column: span 3;
+                }
+                img{
+                    max-width: 100%;
+                    height: 150px;
+                    object-fit: contain;
+                    border-radius: none;
+                    box-shadow: none;
+                }
+                p{
+                    margin-left: 1rem;
+                    grid-column: span 2;
+                    font-size: 2vw;
+                }
+            }
+                
+        }
+        .disc-news-container{
+        margin-top: 50px;
+            a{
+                text-decoration: none;
+                border-radius: 1rem;
+                color: #ffff;
+                padding: 1vh 3vw;
+                background-color: #ff0000;
+                box-shadow: 3px 4px 0 0 #66221c;
+                transition: 1s ease;
+                &:hover{
+                    background-color: #000000;
+                    box-shadow: 3px 4px 0 0 #66221c;
+                }
+            }
+        }
+    
+    }
+}/* fin-noticias */
+
+/* DISCOS */
+.section__discs{
+    width: 80%;
+    margin: auto;
+    padding: 10vh 0;
+    h2{
+        font-size: 2vw;
+    }
+    .flex__container-discs{
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+        text-align: justify !important;
+        
+
+        .container-discs{
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            grid-template-rows: auto; 
+            justify-items: center;
+            grid-template-areas: 
+                "img h3 h3"
+                "img p p"
+                "h4 p p"
+                "btn p p"; 
+                h3{
+                    background-color: #b4b4b4;
+                    grid-area: h3;
+                    font-size: 2.5vw;
+                    font-weight: 600;
+                    margin: 10px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    width: max-content;
+                    text-align: center;
+                    align-self: center;
+                }
+                img{
+                    grid-area: img;
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 1rem;
+                    box-shadow: 0 0 15px #484848;   
+                    align-self: flex-end; 
+                }
+                h4{
+                    grid-area: h4;
+                    align-self: flex-start;
+                    font-size: 1.5vw;
+                    margin: 15px 0;
+                    color: $color-terciary;
+                }
+                p{
+                    font-size: 1.5vh;
+                    grid-area: p;
+                }
+                #disc-buttom{
+                    font-size: 1.2vh;
+                    width: max-content;
+                    grid-area: btn;
+                    justify-self: start;
+                }
+            }
+        .disc-buttom-container{
+            display: flex;
+            justify-content: center;
+                a{
+                text-decoration: none;
+                border-radius: 1rem;
+                color: #ffff;
+                padding: 1vh 3vw;
+                background-color: #ff0000;
+                box-shadow: 3px 4px 0 0 #66221c;
+                transition: 1s ease;
+                &:hover{
+                    background-color: #000000;
+                    box-shadow: 3px 4px 0 0 #66221c;
+                }
+            }
+
+        }
+
+        }
+    }
+
+}/* fin-QUERY */
+}

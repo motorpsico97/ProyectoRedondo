@@ -1,0 +1,123 @@
+//////////////////////////// 
+///* ESTRUCTURA BASICA *///
+//////////////////////////
+.footer__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    .footer_list-container{
+        .footer__list{
+            .footer__item{
+                list-style: none;
+                margin: 10px 0;
+                    a{
+                        margin-left: 20px;
+                        text-decoration: none;
+                        color: #ffffff;
+                        transition: 0.5s;
+                            &:hover {
+                                color: #ff0000;}
+                    }
+            }
+        }
+    }
+    .footer__container-logo{
+        img{
+            display: block;
+        }
+    }
+    .footer__social{
+        @include flex (flex, center, center, column);
+        margin: 5vh;
+            a{
+                font-size: 25px;
+                color: #ff0000;
+                transition: 0.5s;
+                    i{
+                        transition: 0.8s;
+                            &:hover {
+                                color: #ffffff;}
+                    }
+        }
+    }
+}///* Fin - Estructura basica///
+/////////////////////////////// 
+///* MEDIA QUERIES *//////////
+/////////////////////////////
+///
+/// 
+/// * Desactiva img del footer para width<450px
+@media (max-width: 450px){
+.footer__container{
+    .footer__container-logo{
+        img{
+            display: none;
+        }
+    }
+}  
+}
+///* Inicio - min-width:768px*/
+@media (max-width:768px){
+
+.footer__container{
+    .footer_list-container
+        ul{
+            li{
+                padding: 10px 0;
+            }
+            i{
+            margin: 0 1rem;
+            }
+        }
+        img{
+            max-width: 100%;
+            width: 90px;
+            transition: 1s;
+            &:hover{
+                scale: 1.2;
+            }
+        }
+    .footer__social{
+        a{
+            margin-top: 50px;
+        }
+        }
+    }
+}//* Fin - min-width:768px*/
+///
+/// 
+///* Inicio - min-width:768px and max-width: 1024px*/
+@media  (min-width: 768px) and (max-width: 1024px){
+.footer__container{
+    .footer_list-container
+        ul{
+            li{
+                padding: 10px 0;
+            }
+            i{
+            margin: 0 1rem;
+            }
+        }
+        img{
+            max-width: 100%;
+            width: 90px;
+            transition: 1s;
+            &:hover{
+                scale: 1.2;
+            }
+        }
+    .footer__social{
+        a{
+            margin-top: 50px;
+        }
+        }
+    }
+}///* Fin - min-width:768px and max-width: 1024px*/
+
+
+///* Inicio - min-width: 1024px*/
+@media (min-width: 1024px) {
+
+}///* Fin - min-width: 1024px*/
