@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background:linear-gradient(to top, #000000b7, transparent), url("/img/portada/fondo.png");
+    background: url("/img/portada/fondo.png"), linear-gradient(to top, #000000b7, transparent);
     background-size: cover;
     overflow: hidden;
     h1{
