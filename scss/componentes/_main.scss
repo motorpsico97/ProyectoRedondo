@@ -329,42 +329,6 @@
 ///* Inicio - min-width:768px and max-width: 1024px*/
 @media  (min-width: 768px) and (max-width: 1024px){
 /* HERO */
-.hero__container{
-    background:linear-gradient(to top, #000000b7, transparent), url(/img/portada/fondo.png);
-    background-size: cover;
-    h1{
-        font-size: 20vw;
-        letter-spacing: .5vw;
-        font-family: 'Engagement' !important;
-        margin: 5rem auto;
-        color: #fff;
-        background: linear-gradient(45deg, #000000,#930018,#a4007b,#ff012b, #000000 );
-        background-size: 200%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        transition: 4s;
-        animation: h1gradient 2.5s linear infinite;
-        @keyframes h1gradient {
-            to{
-                background-position: 200%;
-            }
-        }
-    }
-    h2{
-        font-size: 3.5vw;
-        margin: -9vh auto;
-        letter-spacing: .3rem;
-        color: #fff;
-    }
-    img{
-        max-width: 100%;
-        width: 100vw;
-        height: auto;
-        margin-top: 15vh;
-        
-    }   
-}
 /* BANNER */
 .banner{
     p{
