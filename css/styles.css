@@ -373,7 +373,7 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
   }
 }
 /* FIN NAV  */
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .hero__container h2 {
     font-size: 4vw;
     margin: -10vh auto;
