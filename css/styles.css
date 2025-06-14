@@ -409,7 +409,7 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
     top: 79px;
     display: flex;
     justify-content: space-between;
-    font-size: 3vw;
+    font-size: 5vw;
     font-weight: 600;
     color: white;
     margin-top: 5vh;
@@ -489,7 +489,7 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
     top: 79px;
     display: flex;
     justify-content: space-between;
-    font-size: 3vw;
+    font-size: 5vw;
     font-weight: 600;
     color: white;
     margin-top: 5vh;
