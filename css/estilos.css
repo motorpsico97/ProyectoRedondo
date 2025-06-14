@@ -232,8 +232,11 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: url("/img/portada/fondo.png"), linear-gradient(to top, rgba(0, 0, 0, 0.7176470588), transparent);
+  background-image: url("/img/portada/fondo.png");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   overflow: hidden;
 }
 .hero__container h1 {

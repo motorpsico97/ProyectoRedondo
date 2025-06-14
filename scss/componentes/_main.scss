@@ -6,8 +6,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: url("/img/portada/fondo.png"), linear-gradient(to top, #000000b7, transparent);
+    background-image: url("/img/portada/fondo.png");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     overflow: hidden;
     h1{
         font-size: 20vw;
