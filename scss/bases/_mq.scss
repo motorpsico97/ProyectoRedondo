@@ -16,6 +16,7 @@ img{
     }
 }  
 }/* fin */
+
 @container header (min-width: 768px) {
 header{
     .header__open-nav-button{
@@ -41,6 +42,7 @@ header{
     }
 }/* fin HEADER */
 }//* Fin - min-width:768px*/
+
 @media (max-width:768px){
 header{
     .header__nav-list{
@@ -56,20 +58,25 @@ header{
 ///
 /// 
 /// BANNER
+/* 
 .banner{
         max-width: 100%;
         width: 100vw;
         background-color: $color-primary;
-        p{
+        .banner-description{
             padding: 1.5rem;
-            font-size: 3vw;
+            font-size: 2vw;
             font-weight: 700;
             color: #fff;
             text-align: center;
             font-family: "Montserrat" !important;
             letter-spacing: 2vw;
         }
-}//*fin - BANNER
+}
+
+ */
+
+//*fin - BANNER
 ///
 /// 
 ///* NOTICIAS */
@@ -78,7 +85,7 @@ header{
         h2{
         display: flex;
         justify-content: space-between;
-        font-size: 5vw;
+        font-size: 3vw;
         font-weight: 600;
         color: #ffff;
         margin-top: 10vh;
@@ -125,7 +132,7 @@ header{
 ///
 /// 
 ///* DISCOS */
-.section__discs{
+/* .section__discs{
     width: 80%;
     margin: auto;
     padding: 10vh 0;
@@ -177,7 +184,9 @@ header{
             }
         
     }
-}//* fin - DISCOS */
+}
+ */
+//* fin - DISCOS */
 ///
 /// 
 ///* BotonArriba */
@@ -224,7 +233,7 @@ header{
             }
         }
     }
-}//* Fin - HEADER/
+}//* Fin - NAV/
 
 .footer__container{
     .footer_list-container

@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url(/img/portada/fondo.png);
+    background-image: url("/img/portada/fondo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,12 +31,6 @@
             }
         }
     }
-    h2{
-        font-size: 4vw;
-        margin: -5vh auto;
-        letter-spacing: .3rem;
-        color: #fff;
-    }
     img{
         max-width: 100%;
         width: 100vw;
@@ -44,28 +38,20 @@
         margin-top: 15vh;
         scale: 1.2;
         filter:brightness(.7);       
-    }   
+    }
+    .imgbg{
+        display: none;
+    }
 }//*fin - HERO*/
 ///
 /// 
-///*BANNER*/
-.banner{
-        max-width: 100%;
-        width: 100vw;
-        background-color: $color-primary;
-        p{
-            padding: 1rem;
-            font-size: 2.5vw;
-            font-weight: 700;
-            color: #fff;
-            text-align: center;
-            font-family: "Montserrat" !important;
-            letter-spacing: 2vw;
-        }
-}//*fin - BANNER*/
+
 ///
 /// 
 ///* NOTICIAS */
+ 
+ 
+
 .section__grid{
     display: flex;
     flex-direction: column;
@@ -76,11 +62,7 @@
                 width: 100%;
                 display: flex;
                 flex-direction: row;
-                margin-bottom: 50px;
                 align-items: center;
-                border: 1px solid rgba(185, 185, 185, 0.7);
-                border-radius: 1rem;
-                padding: 20px;
                 .subgrid-item{
                     p{
                         text-wrap: pretty;
@@ -105,13 +87,13 @@
                         }
                 }
             }
-        .disc-news-container{
+        .news-container{
             display: flex;
             justify-content: center;
             a{
                 text-decoration: none;
                 border-radius: 1rem;
-                color: #ffff;
+                color: #ffffff;
                 padding: 1vh 3vw;
                 background-color: #ff0000;
                 box-shadow: 3px 4px 0 0 #66221c;
@@ -129,7 +111,7 @@
 ///
 /// 
 ///* DISCOS */
-
+/* 
 .section__discs{
     .flex__container-discs{
         .container-discs{
@@ -168,7 +150,7 @@
             }
         }
     }
-}
+} */
 
 /////////////////////////////// 
 ///*fin ESTRUCTURA BASICA *///
