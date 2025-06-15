@@ -408,6 +408,7 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
     gap: 5vh;
   }
   .section__grid h2 {
+    max-width: 100%;
     width: 100vw;
     position: sticky;
     z-index: 2;
@@ -488,6 +489,7 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
     gap: 5vh;
   }
   .section__discs h2 {
+    max-width: 100%;
     width: 100vw;
     position: sticky;
     z-index: 2;
