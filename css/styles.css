@@ -351,14 +351,11 @@ header .hero__container .imgbg {
   letter-spacing: 2vw;
 }
 .banner img {
-  width: 100vw;
+  width: 100%;
 }
 
 /* FIN @media screen and (min-width: 576px) and (max-width: 780px)*/
 @media screen and (min-width: 781px) and (max-width: 1200px) {
-  * img {
-    max-width: 100%;
-  }
   /* HERO */
   .hero__container {
     display: flex;
@@ -410,7 +407,6 @@ header .hero__container .imgbg {
   /* BANNER */
   .banner {
     max-width: 100%;
-    width: 100vw;
     background-color: #000000;
   }
   .banner .banner-description {
@@ -423,10 +419,56 @@ header .hero__container .imgbg {
     letter-spacing: 2vw;
   }
   .banner img {
-    width: 100vw;
+    max-width: 100%;
   }
 }
 /* FIN @media screen and (min-width: 781px) and (max-width: 1200px)*/
+@media screen and (min-width: 1201px) {
+  /* HERO */
+  .hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("/img/portada3.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    height: 100vh;
+  }
+  .hero__container h1 {
+    font-size: 14vw;
+    letter-spacing: 0.5vw;
+    font-family: "Engagement" !important;
+    margin: 5rem auto;
+    color: #fff;
+    background: linear-gradient(45deg, #000000, #930018, #a4007b, #ff012b, #000000);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 4s;
+    animation: h1gradient 2.5s linear infinite;
+  }
+  @keyframes h1gradient {
+    to {
+      background-position: 200%;
+    }
+  }
+  .hero__container h2 {
+    font-size: 4vh;
+    font-weight: 600;
+    position: absolute;
+    top: 450px;
+    left: 20%;
+    color: white;
+    letter-spacing: 10px;
+  }
+  .hero__container img {
+    display: none;
+  }
+} /* FIN - @media screen and (min-width: 1201px)*/
 @media screen and (max-width: 575px) {
   /* NOTICIAS */
   .section__grid {
@@ -703,7 +745,7 @@ header .hero__container .imgbg {
     gap: 50px;
   }
   .section__discs h2 {
-    width: 100vw;
+    max-width: 100vw;
     padding: 10px;
     font-size: 2rem;
     font-weight: 600;
@@ -801,6 +843,7 @@ header .hero__container .imgbg {
   /* fin discos */
 } /* fin @media screen and (min-width: 576px) and (max-width:780px)*/
 @media screen and (min-width: 781px) and (max-width: 1200px) {
+  /* NOTICIAS */
   .section__grid {
     max-width: 80%;
     margin: 100px auto;
@@ -810,7 +853,7 @@ header .hero__container .imgbg {
     gap: 100px 0;
   }
   .section__grid h2 {
-    width: 100%;
+    max-width: 100%;
     border-radius: 0 10px 10px 0;
     padding: 10px;
     font-size: 2rem;
