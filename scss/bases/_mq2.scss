@@ -257,7 +257,6 @@
             .container-discs {
                 border: 1px solid #a2a2a2;
                 border-radius: 1rem;
-                padding: 20px;
                 margin: 20px 0;
                 @include flex(flex, center, center, column);
 
@@ -282,7 +281,7 @@
                 }
 
                 p {
-                    padding: 1vh 3vw;
+                    margin: 0 20px;
                     font-size: 3vw;
                 }
 
@@ -393,7 +392,7 @@
 ///
 ///
 ///
-@media (max-width: 768px) {
+@media (min-width:450px) and (max-width: 768px) {
     .hero__container {
         h1 {
             font-size: 20vw;
@@ -688,7 +687,7 @@
     }
 }
 
-/* FIN (min-width:480px) */
+/* FIN (min-width:450px) and (max-width: 768px) */
 ///
 /// 
 /// 
@@ -696,5 +695,60 @@
 /// 
 /// 
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1440px) {
+    .footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+
+    .footer_list-container {
+        .footer__list {
+            .footer__item {
+                list-style: none;
+                margin: 10px 0;
+
+                a {
+                    margin-left: 20px;
+                    text-decoration: none;
+                    color: #ffffff;
+                    transition: 0.5s;
+
+                    &:hover {
+                        color: #ff0000;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer__container-logo {
+        img {
+            display: block;
+            max-width: 100%;
+            width: 15vh !important; /* sin el !important no funciona */
+        }
+    }
+
+    .footer__social {
+        @include flex (flex, center, center, column);
+        margin: 5vh;
+
+        a {
+            font-size: 25px;
+            color: #ff0000;
+            transition: 0.5s;
+            padding: 10px;
+
+            i {
+                transition: 0.8s;
+
+                &:hover {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
 }
