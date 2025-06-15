@@ -111,8 +111,18 @@
 ///
 
 /// /* HEADER */
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     .hero__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-image: url("../img/portada/bgsmall.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        overflow: hidden;
+
         h2 {
             font-size: 4vw;
             margin: -10vh auto;
@@ -143,7 +153,9 @@
         gap: 5vh;
 
         h2 {
-            z-index: 2;
+            padding: 5px;
+            position: sticky;
+            top: 78px;
             display: flex;
             justify-content: space-between;
             font-size: 5vw;
@@ -231,15 +243,16 @@
     .section__discs {
         width: 100%;
         gap: 5vh;
-
         h2 {
+            padding: 5px;
+            position: sticky;
+            top: 78px;
             font-size: 5vw;
             font-weight: 600;
             color: #ffff;
             margin-top: 5vh;
             background-color: $color-primary;
         }
-
         .flex__container-discs {
             width: 90%;
             margin: 50px auto;
@@ -315,6 +328,7 @@
     }
 }
 
+
 .buttom_container-home {
     display: none;
 }
@@ -382,7 +396,7 @@
 ///
 ///
 ///
-@media (min-width:480px) and (max-width: 768px) {
+@media (min-width:576px) and (max-width: 768px) {
     .hero__container {
         h1 {
             font-size: 20vw;
@@ -512,6 +526,7 @@
 .section__discs {
     width: 100%;
     margin: 20vh 0;
+
     .flex__container-discs {
         display: flex;
         flex-direction: column;
