@@ -204,19 +204,21 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
 .section__grid .grid__container .news-container {
   display: flex;
   justify-content: center;
+  margin-top: -50px;
 }
 .section__grid .grid__container .news-container a {
-  text-decoration: none;
-  border-radius: 1rem;
-  color: #ffffff;
-  padding: 1vh 3vw;
-  background-color: #ff0000;
+  font-size: 1.5vh;
+  padding: 5px 15px;
+  background-color: #910101;
   box-shadow: 3px 4px 0 0 #66221c;
-  transition: 1s ease;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: 1s;
 }
 .section__grid .grid__container .news-container a:hover {
   background-color: #000000;
-  box-shadow: 3px 4px 0 0 #66221c;
+  box-shadow: 3px 4px 0 0 #484848;
 }
 
 /* 
@@ -305,6 +307,12 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
   max-width: 100%;
 }
 
+/* Descactiva IMG footer */
+@media (max-width: 450px) {
+  .footer__container .footer__container-logo img {
+    display: none !important;
+  }
+}
 /* NAV  */
 @container header (min-width: 768px) {
   header .header__open-nav-button {
@@ -380,9 +388,6 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
     letter-spacing: 0.3rem;
     color: #fff;
   }
-  .hero__container .imgbg {
-    display: none;
-  }
   .banner {
     max-width: 100%;
     width: 100vw;
@@ -390,7 +395,7 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
   }
   .banner .banner-description {
     padding: 1.5rem;
-    font-size: 2vw;
+    font-size: 3vw;
     font-weight: 700;
     color: #fff;
     text-align: center;
@@ -567,6 +572,7 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
   display: none;
 }
 
+/* FOOTER */
 .footer__container {
   display: flex;
   flex-direction: row;
@@ -611,7 +617,7 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
 }
 
 /* FIN (max-width:450px) */
-@media (min-width: 450px) {
+@media (max-width: 768px) {
   .hero__container h1 {
     font-size: 20vw;
     letter-spacing: 0.5vw;
@@ -633,37 +639,238 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
     scale: 1.2;
     filter: brightness(0.7);
   }
-  .hero__container .imgbg {
-    display: none;
+  /* BANNER */
+  .banner {
+    max-width: 100%;
+    width: 100vw;
+    background-color: #000000;
   }
-}
-@media (min-width: 780px) {
-  .hero__container {
+  .banner .banner-description {
+    padding: 1.5rem;
+    font-size: 3vw;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    font-family: "Montserrat" !important;
+    letter-spacing: 2vw;
+  }
+  /* NOTICIAS */
+  .section__grid {
+    width: 100%;
+    gap: 5vh;
+  }
+  .section__grid h2 {
+    width: 100vw;
+    position: sticky;
+    z-index: 2;
+    top: 79px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 5vw;
+    font-weight: 600;
+    color: white;
+    margin-top: 5vh;
+    background-color: #000000;
+    padding: 0.5rem;
+  }
+  .section__grid .grid__container {
+    width: 90%;
+    margin: auto;
+  }
+  .section__grid .grid__container .grid__container-item {
+    border: 1px solid #b6b6b6;
+    border-radius: 0 0 1rem 1rem;
+    margin: 50px 0;
+  }
+  .section__grid .grid__container .grid__container-item .subgrid-item {
     display: flex;
     flex-direction: column;
-    background-image: url("/img/portada2.jpg");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow: hidden;
-    height: 100vh;
+    padding-bottom: 20px;
   }
-  .hero__container h1 {
-    font-size: 10vw;
+  .section__grid .grid__container .grid__container-item .subgrid-item h3 {
+    margin-top: 1rem;
+    font-size: 5vw;
+    padding: 0 20px;
   }
-  .hero__container h2 {
-    font-size: 4vw;
-    margin: 50vh auto;
-    letter-spacing: 0.3rem;
-    color: #fff;
+  .section__grid .grid__container .grid__container-item .subgrid-item h4 {
+    font-size: 2.5vw;
+    color: #5c0000;
+    padding: 0 20px;
   }
-  .hero__container img {
-    display: none;
+  .section__grid .grid__container .grid__container-item .subgrid-item p {
+    font-size: 3.5vw;
+    line-height: 1.7;
+    margin: 1rem 0;
+    color: #000000 !important;
+    padding: 0 20px;
   }
-  .hero__container .imgbg {
-    display: none;
+  .section__grid .grid__container .grid__container-item .subgrid-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0 0 0.5rem 0.5rem;
+    box-shadow: 0 0 15px #484848;
+    transition: 1s;
+  }
+  .section__grid .grid__container .grid__container-item .grid__container-buttom {
+    margin-left: 10px;
+  }
+  .section__grid .news-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+  }
+  .section__grid .news-container a {
+    font-size: 1.5vh;
+    padding: 5px 15px;
+    background-color: #910101;
+    box-shadow: 3px 4px 0 0 #66221c;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 1s;
+  }
+  .section__grid .news-container a:hover {
+    background-color: #000000;
+    box-shadow: 3px 4px 0 0 #484848;
   }
 }
+/* DISCOS */
+.section__discs {
+  width: 100%;
+  margin: 20vh 0;
+}
+.section__discs h2 {
+  width: 100vw;
+  position: sticky;
+  z-index: 2;
+  top: 79px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 5vw;
+  font-weight: 600;
+  color: white;
+  margin-top: 5vh;
+  background-color: #000000;
+  padding: 0.5rem;
+}
+.section__discs .flex__container-discs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5vh auto;
+  gap: 10vh;
+}
+.section__discs .flex__container-discs .container-discs {
+  width: 90%;
+  margin: auto;
+  border: 1px solid #a2a2a2;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section__discs .flex__container-discs .container-discs h3 {
+  padding: 5px 0;
+  font-size: 3vh;
+  font-weight: 600;
+  margin: 30px;
+  text-align: center;
+}
+.section__discs .flex__container-discs .container-discs img {
+  max-width: 70%;
+  width: 100vw;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px #484848;
+}
+.section__discs .flex__container-discs .container-discs h4 {
+  font-size: 3.5vw;
+  margin: 20px 0;
+  color: #5c0000;
+}
+.section__discs .flex__container-discs .container-discs p {
+  padding: 1vh 3vw;
+  font-size: 3vw;
+}
+.section__discs .flex__container-discs .container-discs a {
+  font-size: 1.5vh;
+  background-color: #910101;
+  box-shadow: 3px 4px 0 0 #66221c;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  color: white;
+  text-decoration: none;
+  transition: 1s;
+  border-radius: 5px;
+}
+.section__discs .flex__container-discs .container-discs a:hover {
+  background-color: #000000;
+}
+.section__discs .flex__container-discs .disc-buttom-container {
+  display: flex;
+  justify-content: center;
+}
+.section__discs .flex__container-discs .disc-buttom-container a {
+  font-size: 1.5vh;
+  padding: 5px 15px;
+  background-color: #910101;
+  box-shadow: 3px 4px 0 0 #66221c;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: 1s;
+}
+.section__discs .flex__container-discs .disc-buttom-container a:hover {
+  background-color: #000000;
+  box-shadow: 3px 4px 0 0 #484848;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+}
+.footer__container .footer_list-container .footer__list .footer__item {
+  list-style: none;
+  margin: 10px 0;
+}
+.footer__container .footer_list-container .footer__list .footer__item a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.5s;
+}
+.footer__container .footer_list-container .footer__list .footer__item a:hover {
+  color: #ff0000;
+}
+.footer__container .footer__container-logo img {
+  display: block;
+  max-width: 100%;
+  width: 15vh !important;
+}
+.footer__container .footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5vh;
+}
+.footer__container .footer__social a {
+  font-size: 25px;
+  color: #ff0000;
+  transition: 0.5s;
+  padding: 10px;
+}
+.footer__container .footer__social a i {
+  transition: 0.8s;
+}
+.footer__container .footer__social a i:hover {
+  color: #ffffff;
+}
+
+/* FIN (min-width:480px) */
 
 /*# sourceMappingURL=styles.css.map */

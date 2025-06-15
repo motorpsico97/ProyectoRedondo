@@ -2,7 +2,7 @@
 ///* ESTRUCTURA BASICA *///
 //////////////////////////
 /* HERO */
-.hero__container{
+.hero__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -12,65 +12,73 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow: hidden;
-    h1{
+
+    h1 {
         font-size: 20vw;
         letter-spacing: .5vw;
         font-family: 'Engagement' !important;
         margin: 5rem auto;
         color: #fff;
-        background: linear-gradient(45deg, #000000,#930018,#a4007b,#ff012b, #000000 );
+        background: linear-gradient(45deg, #000000, #930018, #a4007b, #ff012b, #000000);
         background-size: 200%;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: 4s;
         animation: h1gradient 2.5s linear infinite;
+
         @keyframes h1gradient {
-            to{
+            to {
                 background-position: 200%;
             }
         }
     }
-    img{
+
+    img {
         max-width: 100%;
         width: 100vw;
         height: auto;
         margin-top: 15vh;
         scale: 1.2;
-        filter:brightness(.7);       
+        filter: brightness(.7);
     }
-    .imgbg{
+
+    .imgbg {
         display: none;
     }
-}//*fin - HERO*/
+}
+
+//*fin - HERO*/
 ///
 /// 
 
 ///
 /// 
 ///* NOTICIAS */
- 
- 
 
-.section__grid{
+.section__grid {
     display: flex;
     flex-direction: column;
     margin: auto;
     margin-top: 5rem;
-        .grid__container{
-            .grid__container-item{
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                .subgrid-item{
-                    p{
-                        text-wrap: pretty;
-                    }
-                    .grid__container-buttom{
-                        display: flex;
-                        justify-content: start;
-                        a{
+
+    .grid__container {
+        .grid__container-item {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .subgrid-item {
+                p {
+                    text-wrap: pretty;
+                }
+
+                .grid__container-buttom {
+                    display: flex;
+                    justify-content: start;
+
+                    a {
                         font-size: 1.5vh;
                         padding: 5px 15px;
                         background-color: #910101;
@@ -79,31 +87,37 @@
                         border-radius: 4px;
                         text-decoration: none;
                         transition: 1s;
-                            &:hover {
-                        background-color: #000000;
-                        box-shadow: 3px 4px 0 0 #484848;
-                            }
+
+                        &:hover {
+                            background-color: #000000;
+                            box-shadow: 3px 4px 0 0 #484848;
                         }
-                        }
+                    }
                 }
             }
-        .news-container{
+        }
+
+        .news-container {
             display: flex;
             justify-content: center;
-            a{
-                text-decoration: none;
-                border-radius: 1rem;
-                color: #ffffff;
-                padding: 1vh 3vw;
-                background-color: #ff0000;
+            margin-top: -50px;
+
+            a {
+                font-size: 1.5vh;
+                padding: 5px 15px;
+                background-color: #910101;
                 box-shadow: 3px 4px 0 0 #66221c;
-                transition: 1s ease;
-                &:hover{
+                color: #ffff;
+                border-radius: 4px;
+                text-decoration: none;
+                transition: 1s;
+
+                &:hover {
                     background-color: #000000;
-                    box-shadow: 3px 4px 0 0 #66221c;
+                    box-shadow: 3px 4px 0 0 #484848;
                 }
             }
-        }    
+        }
     }
 }
 
