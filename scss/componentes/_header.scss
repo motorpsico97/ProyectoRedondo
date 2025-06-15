@@ -111,10 +111,11 @@ header{
     }
 }
 }///* fin - ESTRUCTURA BASICA */
-
-
-
-/* QUERIES */
+//////////////////////////// 
+//////////////////////////// 
+////////* QUERIES */////////
+//////////////////////////// 
+/// ////////////////////////
 /* NAV  */
 @container header (min-width: 768px) {
     header {
@@ -159,8 +160,7 @@ header{
             }
         }
     }
-}
-
+} 
 @media screen and (min-width: 768px) {
     header {
         .header__checkbox {
@@ -200,13 +200,7 @@ header{
             }
         }
     }
-}
-/* FIN NAV  */
-///
-/// 
-/// 
-/// 
-/// 
+}/* fin - NAV  */
 /// 
 /// 
 /// 
@@ -265,9 +259,12 @@ header{
         display: none;
     }
 }
-}
-
-/* (min-width: 575px)  */
+}/* FIN @media screen and (max-width: 575px) */
+///
+/// 
+/// 
+/// 
+/// 
 @media screen and (min-width: 576px) and (max-width: 780px){
  /* HERO */
     .hero__container {
@@ -280,7 +277,6 @@ header{
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow: hidden;
-
     h1 {
         font-size: 20vw;
         letter-spacing: .5vw;
@@ -294,7 +290,6 @@ header{
         -webkit-text-fill-color: transparent;
         transition: 4s;
         animation: h1gradient 2.5s linear infinite;
-
         @keyframes h1gradient {
             to {
                 background-position: 200%;
@@ -315,7 +310,6 @@ header{
         scale: 1.2;
         filter: brightness(.7);
     }
-
     .imgbg {
         display: none;
     }
@@ -339,10 +333,95 @@ header{
         img{
             width: 100vw;
         }
-    }
-
-
-
+}
+/* FIN @media screen and (min-width: 576px) and (max-width: 780px)*/
+///
+/// 
+/// 
+/// 
+///
 @media screen and (min-width: 781px) and (max-width: 1200px){
+    *{
+        img{
+            max-width: 100%;
+        }
+    }
+/* HERO */
+    .hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../img/portada/fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    h1 {
+        font-size: 20vw;
+        letter-spacing: .5vw;
+        font-family: 'Engagement' !important;
+        margin: 5rem auto;
+        color: #fff;
+        background: linear-gradient(45deg, #000000, #930018, #a4007b, #ff012b, #000000);
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 4s;
+        animation: h1gradient 2.5s linear infinite;
+        @keyframes h1gradient {
+            to {
+                background-position: 200%;
+            }
+        }
+    }
+    h2{
+        font-size: 3vh;
+        margin: -5rem auto;
+        color: white;
+        letter-spacing: 3px;
+    }
+    img {
+        max-width: 100%;
+        width: 100vw;
+        height: auto;
+        margin-top: 15vh;
+        scale: 1.2;
+        filter: brightness(.7);
+    }
+    .imgbg {
+        display: none;
+    }
+}
 
+
+    /* BANNER */
+    .banner {
+        max-width: 100%;
+        width: 100vw;
+        background-color: $color-primary;
+        .banner-description {
+            padding: 1.5rem;
+            font-size: 2vw;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            font-family: "Montserrat" !important;
+            letter-spacing: 2vw;
+        }
+        img{
+            width: 100vw;
+        }
+}
+}
+/* FIN @media screen and (min-width: 781px) and (max-width: 1200px)*/
+///
+/// 
+/// 
+/// 
+///
+@media screen and (min-width: 1201px) {
+
+    
 }
