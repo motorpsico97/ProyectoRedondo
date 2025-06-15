@@ -173,9 +173,11 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
   flex-direction: column;
   margin: auto;
   margin-top: 5rem;
+  max-width: 100%;
 }
 .section__grid .grid__container .grid__container-item {
   width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -408,11 +410,7 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
     gap: 5vh;
   }
   .section__grid h2 {
-    max-width: 100%;
-    width: 100vw;
-    position: sticky;
     z-index: 2;
-    top: 79px;
     display: flex;
     justify-content: space-between;
     font-size: 5vw;
@@ -420,7 +418,6 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
     color: white;
     margin-top: 5vh;
     background-color: #000000;
-    padding: 0.5rem;
   }
   .section__grid .grid__container {
     width: 90%;
@@ -489,19 +486,11 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
     gap: 5vh;
   }
   .section__discs h2 {
-    max-width: 100%;
-    width: 100vw;
-    position: sticky;
-    z-index: 2;
-    top: 79px;
-    display: flex;
-    justify-content: space-between;
     font-size: 5vw;
     font-weight: 600;
     color: white;
     margin-top: 5vh;
     background-color: #000000;
-    padding: 0.5rem;
   }
   .section__discs .flex__container-discs {
     width: 90%;
@@ -618,7 +607,7 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
 }
 
 /* FIN (max-width:450px) */
-@media (min-width: 450px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .hero__container h1 {
     font-size: 20vw;
     letter-spacing: 0.5vw;
@@ -659,20 +648,6 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
   .section__grid {
     width: 100%;
     gap: 5vh;
-  }
-  .section__grid h2 {
-    width: 100vw;
-    position: sticky;
-    z-index: 2;
-    top: 79px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 5vw;
-    font-weight: 600;
-    color: white;
-    margin-top: 5vh;
-    background-color: #000000;
-    padding: 0.5rem;
   }
   .section__grid .grid__container {
     width: 90%;
@@ -740,20 +715,6 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
 .section__discs {
   width: 100%;
   margin: 20vh 0;
-}
-.section__discs h2 {
-  width: 100vw;
-  position: sticky;
-  z-index: 2;
-  top: 79px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 5vw;
-  font-weight: 600;
-  color: white;
-  margin-top: 5vh;
-  background-color: #000000;
-  padding: 0.5rem;
 }
 .section__discs .flex__container-discs {
   display: flex;
@@ -872,52 +833,6 @@ header .header__nav .header__nav-list .header__nav-item a:is(:hover, :active) {
   color: #ffffff;
 }
 
-/* FIN (min-width:450px) and (max-width: 768px) */
-@media (min-width: 768px) and (max-width: 1440px) {
-  .footer__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000000;
-  }
-  .footer__container .footer_list-container .footer__list .footer__item {
-    list-style: none;
-    margin: 10px 0;
-  }
-  .footer__container .footer_list-container .footer__list .footer__item a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #ffffff;
-    transition: 0.5s;
-  }
-  .footer__container .footer_list-container .footer__list .footer__item a:hover {
-    color: #ff0000;
-  }
-  .footer__container .footer__container-logo img {
-    display: block;
-    max-width: 100%;
-    width: 15vh !important; /* sin el !important no funciona */
-  }
-  .footer__container .footer__social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 5vh;
-  }
-  .footer__container .footer__social a {
-    font-size: 25px;
-    color: #ff0000;
-    transition: 0.5s;
-    padding: 10px;
-  }
-  .footer__container .footer__social a i {
-    transition: 0.8s;
-  }
-  .footer__container .footer__social a i:hover {
-    color: #ffffff;
-  }
-}
+/* FIN (min-width:480px) */
 
 /*# sourceMappingURL=styles.css.map */

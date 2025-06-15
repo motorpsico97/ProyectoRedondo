@@ -143,11 +143,7 @@
         gap: 5vh;
 
         h2 {
-            max-width: 100%;
-            width: 100vw;
-            position: sticky;
             z-index: 2;
-            top: 79px;
             display: flex;
             justify-content: space-between;
             font-size: 5vw;
@@ -155,7 +151,7 @@
             color: #ffff;
             margin-top: 5vh;
             background-color: $color-primary;
-            padding: 0.5rem;
+
         }
 
         .grid__container {
@@ -237,19 +233,11 @@
         gap: 5vh;
 
         h2 {
-            max-width: 100%;
-            width: 100vw;
-            position: sticky;
-            z-index: 2;
-            top: 79px;
-            display: flex;
-            justify-content: space-between;
             font-size: 5vw;
             font-weight: 600;
             color: #ffff;
             margin-top: 5vh;
             background-color: $color-primary;
-            padding: 0.5rem;
         }
 
         .flex__container-discs {
@@ -394,7 +382,7 @@
 ///
 ///
 ///
-@media (min-width:450px) and (max-width: 768px) {
+@media (min-width:480px) and (max-width: 768px) {
     .hero__container {
         h1 {
             font-size: 20vw;
@@ -443,20 +431,7 @@
         width: 100%;
         gap: 5vh;
 
-        h2 {
-            width: 100vw;
-            position: sticky;
-            z-index: 2;
-            top: 79px;
-            display: flex;
-            justify-content: space-between;
-            font-size: 5vw;
-            font-weight: 600;
-            color: #ffff;
-            margin-top: 5vh;
-            background-color: $color-primary;
-            padding: 0.5rem;
-        }
+
 
         .grid__container {
             width: 90%;
@@ -537,22 +512,6 @@
 .section__discs {
     width: 100%;
     margin: 20vh 0;
-
-    h2 {
-        width: 100vw;
-        position: sticky;
-        z-index: 2;
-        top: 79px;
-        display: flex;
-        justify-content: space-between;
-        font-size: 5vw;
-        font-weight: 600;
-        color: #ffff;
-        margin-top: 5vh;
-        background-color: $color-primary;
-        padding: 0.5rem;
-    }
-
     .flex__container-discs {
         display: flex;
         flex-direction: column;
@@ -689,7 +648,7 @@
     }
 }
 
-/* FIN (min-width:450px) and (max-width: 768px) */
+/* FIN (min-width:480px) */
 ///
 /// 
 /// 
@@ -697,60 +656,4 @@
 /// 
 /// 
 
-@media (min-width: 768px) and (max-width: 1440px) {
-    .footer__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000000;
-
-    .footer_list-container {
-        .footer__list {
-            .footer__item {
-                list-style: none;
-                margin: 10px 0;
-
-                a {
-                    margin-left: 20px;
-                    text-decoration: none;
-                    color: #ffffff;
-                    transition: 0.5s;
-
-                    &:hover {
-                        color: #ff0000;
-                    }
-                }
-            }
-        }
-    }
-
-    .footer__container-logo {
-        img {
-            display: block;
-            max-width: 100%;
-            width: 15vh !important; /* sin el !important no funciona */
-        }
-    }
-
-    .footer__social {
-        @include flex (flex, center, center, column);
-        margin: 5vh;
-
-        a {
-            font-size: 25px;
-            color: #ff0000;
-            transition: 0.5s;
-            padding: 10px;
-
-            i {
-                transition: 0.8s;
-
-                &:hover {
-                    color: #ffffff;
-                }
-            }
-        }
-    }
-}
-}
+@media (min-width: 1440px) {}

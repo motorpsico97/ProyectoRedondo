@@ -61,10 +61,11 @@
     flex-direction: column;
     margin: auto;
     margin-top: 5rem;
-
+    max-width: 100%;
     .grid__container {
         .grid__container-item {
             width: 100%;
+            max-width: 100%;
             display: flex;
             flex-direction: row;
             align-items: center;
