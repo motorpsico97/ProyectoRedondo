@@ -983,9 +983,6 @@
                 }
             .form__container-personal{
                 padding: 15px;
-                .label-name{
-                }
-                
             }
             .form__container-contacto{
                 padding: 15px;
@@ -2109,29 +2106,66 @@
     max-width: 100vw;
     width: 60%;
     margin: auto;
-    h2{
-        font-size: 3rem;
-    }
+    margin-bottom: 5vw;
     .discografia-container{
-        
+        @include flex(flex, flex-start, flex-start, column);
+            h2{
+                width: 100%;
+                padding: 50px;
+                color: rgb(255, 255, 255);
+                background-image: url("../img/banderas.jpg");
+                background-size: contain;
+                font-size: 4rem;
+                font-weight: 800;
+                margin: 50px 0;
+            }
         .discos-container{
-            @include flex(flex, space-between, flex-start, row);
+            @include flex(flex, space-around, flex-start, row);
             flex-wrap: wrap;
-            
+            flex-basis: 300px;
+            gap: 60px;
         }
         .discos-items{
             max-width: 300px;
             width: 300px;
+            height: 466px;
+            border: 1px solid grey;
+            border-radius: 15px;
+            .discos-items-description{
+                @include flex(flex, center, center, column);
+                text-align: baseline;
+                i{
+                    font-size: 1.6rem;
+                    transition: .7s;
+                    &:hover{
+                        scale: 1.2;
+                        color: red;
+                    }
+                }
+            }
             h3{
-                font-size: 1.5rem;
+                font-size: 1.2rem;
+                font-weight: 600;
+                text-align: center;
+                margin: 15px 0;
             }
             p{
                 font-size: 1rem;
             }
             img{
                 max-width: 100%;
+                border-radius: 15px;
+                transition: .6s;
+                &:hover{
+                    opacity: .9;
+                    scale: .93;
+                    border: 3px solid rgb(150, 150, 150);
+                }
             }
         }
+    }
+    .buttom_container-home{
+        display: none;
     }
 }
 }/* fin @media screen and (min-width: 1201px)*/
