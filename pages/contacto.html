@@ -29,13 +29,13 @@
         <input type="checkbox" name="" id="open-menu" class="header__checkbox">
         <label for="open-menu" class="header__open-nav-button" role="button">=</label>
         <div class="header_logo-container">
-            <a  href="../index.html"><img src="../img/logo.png" alt="" class="header-logo"></a>
+            <a href="../index.html"><img src="../img/logo.png" alt="" class="header-logo"></a>
         </div>
         <nav class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item">
-                    <a href="../index.html" >
-                        <i class="bi bi-house" ></i>Inicio
+                    <a href="../index.html">
+                        <i class="bi bi-house"></i>Inicio
                     </a>
                 </li>
                 <li class="header__nav-item">
@@ -68,45 +68,43 @@
 
     <main>
         <section class="form__container">
-            <h2>Formulario para contacto</h2>
-            <div class="form_items">
+            <h2>Formulario de contacto</h2>
+            <div class="form-items">
                 <form action="">
                     <fieldset class="form__container-personal">
                         <legend>Datos personales</legend>
-                        <label for="text-name">Nombre</label>
-                        <input type="text" id="text-name" placeholder="Ingrese su nombre" autofocus maxlength="15"
-                            minlength="3" required><br>
-                        <label for="text-apellido">Apellido</label>
+                        <label for="text-name" class="label-name">Nombre</label>
+                        <input type="text" id="text-name" placeholder="Ingrese su nombre" autofocus maxlength="15" minlength="3"
+                            required><br>
+                        <label for="text-apellido" class="label-apellido">Apellido</label>
                         <input type="text" id="text-apellido" placeholder="Ingrese su apellido" required>
                     </fieldset>
                     <fieldset class="form__container-contacto">
                         <legend>Datos de contacto</legend>
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" required">
+                        <label for="email" >E-mail</label>
+                        <input type="email" id="email" required" placeholder="Ingrese su e-mail">
                     </fieldset>
                     <fieldset class="form__container-mensaje">
                         <legend>Mensaje</legend>
-                        <div>
-                            <label for="textarea-msg">Deje su mensaje</label>
-                            <textarea name="" id="textarea-msg">Mensaje</textarea><br>
-                        </div>
+                        <textarea name="" id="textarea-msg">Mensaje</textarea><br>
                     </fieldset>
                     <fieldset class="form__container-lista">
-                        <label for="cars">¿Cómo nos conoció?</label>
-                        <select id="cars" name="cars">
-                            <option value="volvo">Amigos</option>
-                            <option value="saab">Youtube</option>
-                            <option value="fiat">Spotify</option>
-                            <option value="audi">Otros</option>
+                        <label for="lista">¿Cómo nos conoció?</label>
+                        <select id="lista" name="lista">
+                            <option value="Amigos">Amigos</option>
+                            <option value="YouTube">Youtube</option>
+                            <option value="Spotify">Spotify</option>
+                            <option value="Otros">Otros</option>
                         </select>
                     </fieldset>
                     <div class="form-buttom">
                         <input type="button" value="Enviar" class="form-buttom-send">
                         <input type="reset" value="Resetear" class="form-buttom-restart">
                     </div>
-
+                </form>
             </div>
         </section>
+        
         <!-- Boton hacia arriba -->
         <div class="buttom_container-home">
             <a href="">
@@ -164,11 +162,6 @@
         </div>
         <span>© 2025 Patricio Rey</span>
     </footer>
-
-
-
-
-
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"

@@ -1002,7 +1002,7 @@ header .hero__container #img2 {
   .main__noticias .section-container-noticias {
     max-width: 100%;
     gap: 30px;
-    width: 90%;
+    width: 100%;
     margin: auto;
     grid-area: news;
     display: flex;
@@ -1042,9 +1042,11 @@ header .hero__container #img2 {
     display: grid;
     align-items: start;
     align-content: start;
-    grid-template-columns: 125px 1fr;
+    grid-template-columns: 130px 1fr;
     padding: 25px 0;
+    row-gap: 10px;
     column-gap: 15px;
+    margin: 0 20px;
     border-bottom: 1px solid #000000;
   }
   .main__noticias .section-container-noticias .container-items-noticias img {
@@ -1087,6 +1089,82 @@ header .hero__container #img2 {
     font-size: 2rem;
   }
   /* fin page NOTICIAS */
+  /* page CONTACTO */
+  .form__container {
+    max-width: 100%;
+    width: 80%;
+    margin: 5vh auto;
+    background-color: black;
+    padding: 40px;
+    color: white;
+    border-radius: 10px;
+  }
+  .form__container h2 {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  .form__container .form-items {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+  }
+  .form__container .form-items form legend {
+    color: rgb(103, 0, 0);
+  }
+  .form__container .form-items form input[type=text], .form__container .form-items form input[type=email] {
+    width: 100%;
+    margin: 30px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid red;
+    border-radius: 5px;
+    color: white;
+  }
+  .form__container .form-items form .form__container-personal {
+    padding: 15px;
+  }
+  .form__container .form-items form .form__container-contacto {
+    padding: 15px;
+  }
+  .form__container .form-items form .form__container-mensaje {
+    padding: 15px;
+  }
+  .form__container .form-items form .form__container-mensaje textarea {
+    width: 100%;
+    height: 200px;
+  }
+  .form__container .form-items form .form__container-lista {
+    padding: 15px;
+    font-size: 1.3rem;
+    color: rgb(103, 0, 0);
+  }
+  .form__container .form-items form .form__container-lista #lista {
+    font-size: 1rem;
+    margin: 0 15px;
+  }
+  .form__container .form-items form .form-buttom {
+    padding: px;
+  }
+  .form__container .form-items form .form-buttom input[type=button], .form__container .form-items form .form-buttom input[type=reset] {
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px;
+    text-transform: uppercase;
+    transition: 1s;
+  }
+  .form__container .form-items form .form-buttom input[type=button]:hover, .form__container .form-items form .form-buttom input[type=reset]:hover {
+    background-color: white;
+    color: #000000;
+    scale: 1.2;
+  }
+  /* fin CONTACTO */
 } /* fin @media screen and (max-width: 575px) */
 @media screen and (min-width: 576px) and (max-width: 780px) {
   .section__grid {
@@ -1551,6 +1629,82 @@ header .hero__container #img2 {
     align-self: flex-end;
   }
   /* fin page NOTICIAS */
+  /* page CONTACTO */
+  .form__container {
+    max-width: 100%;
+    width: 80%;
+    margin: 5vh auto;
+    background-color: black;
+    padding: 40px;
+    color: white;
+    border-radius: 10px;
+  }
+  .form__container h2 {
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  .form__container .form-items {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+  }
+  .form__container .form-items form legend {
+    color: rgb(103, 0, 0);
+  }
+  .form__container .form-items form input[type=text], .form__container .form-items form input[type=email] {
+    width: 350px;
+    margin: 30px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid red;
+    border-radius: 5px;
+    color: white;
+  }
+  .form__container .form-items form .form__container-personal {
+    padding: 15px;
+  }
+  .form__container .form-items form .form__container-contacto {
+    padding: 15px;
+  }
+  .form__container .form-items form .form__container-mensaje {
+    padding: 15px;
+  }
+  .form__container .form-items form .form__container-mensaje textarea {
+    width: 250px;
+    height: 200px;
+  }
+  .form__container .form-items form .form__container-lista {
+    padding: 15px;
+    font-size: 1.3rem;
+    color: rgb(103, 0, 0);
+  }
+  .form__container .form-items form .form__container-lista #lista {
+    font-size: 1rem;
+    margin: 0 15px;
+  }
+  .form__container .form-items form .form-buttom {
+    padding: px;
+  }
+  .form__container .form-items form .form-buttom input[type=button], .form__container .form-items form .form-buttom input[type=reset] {
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px;
+    text-transform: uppercase;
+    transition: 1s;
+  }
+  .form__container .form-items form .form-buttom input[type=button]:hover, .form__container .form-items form .form-buttom input[type=reset]:hover {
+    background-color: white;
+    color: #000000;
+    scale: 1.2;
+  }
+  /* fin CONTACTO */
 } /* fin @media screen and (min-width: 576px) and (max-width:780px)*/
 @media screen and (min-width: 781px) and (max-width: 1200px) {
   /* NOTICIAS */
@@ -1989,6 +2143,7 @@ header .hero__container #img2 {
     width: 100%;
     place-items: center;
     align-self: center;
+    border-radius: 5px;
   }
   .main__noticias .section-container-noticias .container-items-noticias h3 {
     grid-column-start: 2;
@@ -2019,6 +2174,85 @@ header .hero__container #img2 {
     align-self: flex-end;
   }
   /* fin page NOTICIAS */
+  /* page CONTACTO */
+  .form__container {
+    max-width: 100%;
+    width: 80%;
+    margin: 5vh auto;
+    background-color: black;
+    padding: 40px;
+    color: white;
+    border-radius: 10px;
+  }
+  .form__container h2 {
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  .form__container .form-items {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+  }
+  .form__container .form-items form legend {
+    color: rgb(103, 0, 0);
+  }
+  .form__container .form-items form input[type=text], .form__container .form-items form input[type=email] {
+    width: 350px;
+    margin: auto 30px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid red;
+    border-radius: 5px;
+    color: white;
+  }
+  .form__container .form-items form .form__container-personal {
+    padding: 15px;
+  }
+  .form__container .form-items form .form__container-personal .label-name {
+    margin: 15px 0;
+  }
+  .form__container .form-items form .form__container-contacto {
+    padding: 15px;
+  }
+  .form__container .form-items form .form__container-mensaje {
+    padding: 15px;
+  }
+  .form__container .form-items form .form__container-mensaje textarea {
+    width: 250px;
+    height: 200px;
+  }
+  .form__container .form-items form .form__container-lista {
+    padding: 15px;
+    font-size: 1.3rem;
+    color: rgb(103, 0, 0);
+  }
+  .form__container .form-items form .form__container-lista #lista {
+    font-size: 1rem;
+    margin: 0 15px;
+  }
+  .form__container .form-items form .form-buttom {
+    padding: px;
+  }
+  .form__container .form-items form .form-buttom input[type=button], .form__container .form-items form .form-buttom input[type=reset] {
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px;
+    text-transform: uppercase;
+    transition: 1s;
+  }
+  .form__container .form-items form .form-buttom input[type=button]:hover, .form__container .form-items form .form-buttom input[type=reset]:hover {
+    background-color: white;
+    color: #000000;
+    scale: 1.2;
+  }
+  /* fin CONTACTO */
 } /* fin @media screen and (min-width: 781px) and (max-width: 1200px)*/
 @media screen and (min-width: 1201px) {
   /* NOTICIAS */
@@ -2383,7 +2617,7 @@ header .hero__container #img2 {
   .main__noticias {
     max-width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr 500px;
     grid-template-rows: auto;
     grid-template-areas: "news aside";
   }
@@ -2428,8 +2662,9 @@ header .hero__container #img2 {
     display: grid;
     align-items: start;
     align-content: start;
-    grid-template-columns: 350px 1fr;
-    padding: 25px 0;
+    grid-template-columns: 250px 1fr;
+    padding: 25px;
+    gap: 30px;
     border-bottom: 1px solid #000000;
   }
   .main__noticias .section-container-noticias .container-items-noticias img {
@@ -2439,6 +2674,7 @@ header .hero__container #img2 {
     object-fit: cover;
     place-items: center;
     align-self: center;
+    border-radius: 10px;
   }
   .main__noticias .section-container-noticias .container-items-noticias h3 {
     grid-column-start: 2;
@@ -2467,6 +2703,85 @@ header .hero__container #img2 {
     background-color: red;
   }
   /* fin page NOTICIAS */
+  /* page CONTACTO */
+  .form__container {
+    max-width: 100%;
+    width: 800px;
+    margin: 5vh auto;
+    background-color: black;
+    padding: 40px;
+    color: white;
+    border-radius: 10px;
+  }
+  .form__container h2 {
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  .form__container .form-items {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+  }
+  .form__container .form-items form legend {
+    color: rgb(103, 0, 0);
+  }
+  .form__container .form-items form input[type=text], .form__container .form-items form input[type=email] {
+    width: 350px;
+    margin: auto 30px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid red;
+    border-radius: 5px;
+    color: white;
+  }
+  .form__container .form-items form .form__container-personal {
+    padding: 15px;
+  }
+  .form__container .form-items form .form__container-personal .label-name {
+    margin: 15px 0;
+  }
+  .form__container .form-items form .form__container-contacto {
+    padding: 15px;
+  }
+  .form__container .form-items form .form__container-mensaje {
+    padding: 15px;
+  }
+  .form__container .form-items form .form__container-mensaje textarea {
+    width: 250px;
+    height: 200px;
+  }
+  .form__container .form-items form .form__container-lista {
+    padding: 15px;
+    font-size: 1.3rem;
+    color: rgb(103, 0, 0);
+  }
+  .form__container .form-items form .form__container-lista #lista {
+    font-size: 1rem;
+    margin: 0 15px;
+  }
+  .form__container .form-items form .form-buttom {
+    padding: px;
+  }
+  .form__container .form-items form .form-buttom input[type=button], .form__container .form-items form .form-buttom input[type=reset] {
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px;
+    text-transform: uppercase;
+    transition: 1s;
+  }
+  .form__container .form-items form .form-buttom input[type=button]:hover, .form__container .form-items form .form-buttom input[type=reset]:hover {
+    background-color: white;
+    color: #000000;
+    scale: 1.2;
+  }
+  /* fin CONTACTO */
 } /* fin @media screen and (min-width: 1201px)*/
 @media (max-width: 450px) {
   .footer__container .footer__container-logo img {
