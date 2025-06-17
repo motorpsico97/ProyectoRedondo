@@ -2782,6 +2782,35 @@ header .hero__container #img2 {
     scale: 1.2;
   }
   /* fin CONTACTO */
+  /* page DISCOGRAFIA */
+  .main-discografia {
+    max-width: 100vw;
+    width: 60%;
+    margin: auto;
+  }
+  .main-discografia h2 {
+    font-size: 3rem;
+  }
+  .main-discografia .discografia-container .discos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .main-discografia .discografia-container .discos-items {
+    max-width: 300px;
+    width: 300px;
+  }
+  .main-discografia .discografia-container .discos-items h3 {
+    font-size: 1.5rem;
+  }
+  .main-discografia .discografia-container .discos-items p {
+    font-size: 1rem;
+  }
+  .main-discografia .discografia-container .discos-items img {
+    max-width: 100%;
+  }
 } /* fin @media screen and (min-width: 1201px)*/
 @media (max-width: 450px) {
   .footer__container .footer__container-logo img {

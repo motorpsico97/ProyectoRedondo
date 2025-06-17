@@ -449,10 +449,7 @@
                     color: white;
                 }
             .form__container-personal{
-                padding: 15px;
-                .label-name{
-                }
-                
+                padding: 15px;                
             }
             .form__container-contacto{
                 padding: 15px;
@@ -2107,7 +2104,36 @@
         }
     }
 }/* fin CONTACTO */
-
+/* page DISCOGRAFIA */
+.main-discografia{
+    max-width: 100vw;
+    width: 60%;
+    margin: auto;
+    h2{
+        font-size: 3rem;
+    }
+    .discografia-container{
+        
+        .discos-container{
+            @include flex(flex, space-between, flex-start, row);
+            flex-wrap: wrap;
+            
+        }
+        .discos-items{
+            max-width: 300px;
+            width: 300px;
+            h3{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}
 }/* fin @media screen and (min-width: 1201px)*/
 ///
 /// 
