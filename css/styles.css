@@ -2832,6 +2832,10 @@ header .hero__container #img2 {
     flex-direction: column;
     text-align: baseline;
   }
+  .main-discografia .discografia-container .discos-items .discos-items-description a {
+    text-decoration: none;
+    color: #000000;
+  }
   .main-discografia .discografia-container .discos-items .discos-items-description i {
     font-size: 1.6rem;
     transition: 0.7s;

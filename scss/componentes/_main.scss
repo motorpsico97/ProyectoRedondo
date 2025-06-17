@@ -2134,6 +2134,10 @@
             .discos-items-description{
                 @include flex(flex, center, center, column);
                 text-align: baseline;
+                a{
+                    text-decoration: none;
+                    color: $color-primary;
+                }
                 i{
                     font-size: 1.6rem;
                     transition: .7s;
