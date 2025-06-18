@@ -1305,115 +1305,241 @@ header .hero__container #img2 {
   }
   /* fin CONTACTO */
   /* page DISCOGRAFIA */
-  .main-discografia .card .container {
-    width: 90%;
+  .main-discografia .card {
+    position: relative;
+    padding-block: 5rem;
+  }
+  .main-discografia .card img {
+    max-width: 100%;
+  }
+  .main-discografia .card .card__bg, .main-discografia .card .card__blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .main-discografia .card__container {
+    position: relative;
+    display: grid;
     grid-template-columns: 1fr;
-  }
-  .main-discografia .card .card__data .card__name {
-    font-size: 2rem;
-  }
-  .main-discografia .card .info {
-    clip-path: circle(8px at 93% 8%);
-    padding: 5rem;
-  }
-  /* page GULP! */
-  .main-gulp {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 100vw;
-    width: 100%;
-  }
-  .main-gulp h1 {
-    font-size: 5rem;
-    font-weight: 700;
-    margin-top: 5rem;
-    border-bottom: 5px solid red;
-    transition: 1s;
-  }
-  .main-gulp h1:hover {
-    background-color: black;
-    padding: 10px;
-    border-radius: 10px 20px;
-    color: red;
-    scale: 1.2;
-    letter-spacing: 5px;
-  }
-  .main-gulp .disc-description {
-    max-width: 100%;
-    font-size: 3.5vw;
-    padding: 2rem;
-    margin: auto;
-    text-align: center;
-  }
-  .main-gulp .disc-table {
-    font-size: 3vw;
-    border: 1px solid rgba(0, 0, 0, 0.261);
-    border-radius: 0.5rem;
-  }
-  .main-gulp .disc-table table {
-    border-collapse: separate;
-    border-spacing: 5px;
-    background-color: #ececec;
-    border-radius: 0.5rem;
-    padding: 1vw;
-  }
-  .main-gulp .disc-table table .cabecera {
-    background-color: red;
-    text-align: center;
-    color: white;
-    font-size: 4vw;
-  }
-  .main-gulp .disc-table table .cabecera2 {
-    background-color: rgba(255, 0, 0, 0.604);
-    text-align: center;
-    font-weight: normal;
-    color: white;
-    font-size: minmax(1vw, 1.2vw);
-  }
-  .main-gulp .disc-songs {
-    padding: 3vw 0;
-    margin: 3vw 0;
-    font-size: 1vw;
-  }
-  .main-gulp .disc-songs h3 {
-    font-size: 5vw;
-  }
-  .main-gulp .disc-songs ol li {
-    padding: 5px 0;
-    font-size: 2.7vw;
-  }
-  .main-gulp .videos-container {
-    max-width: 90%;
-    align-self: center;
-  }
-  .main-gulp .videos-container iframe {
-    border-radius: 15px;
-    max-width: 100%;
-  }
-  .main-gulp .img-container1 {
-    display: none;
-  }
-  .main-gulp .img-container2 {
-    display: none;
-  }
-  .main-gulp #carouselExampleFade {
+    gap: 2rem;
     width: 90%;
-    margin: 5rem 0;
   }
-  .main-gulp #carouselExampleFade img {
-    width: 100%;
-    border-radius: 15px;
+  .main-discografia .card__container .card__article {
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
   }
-  .main-gulp .social iframe {
+  .main-discografia .card__container .card__article:hover .card__img {
+    transform: scale(1.1);
+  }
+  .main-discografia .card__container .card__article:hover .card__clip {
+    transform: rotate(-45deg);
+  }
+  .main-discografia .card__container .card__img {
+    border-radius: 2rem;
+    transition: transform 0.4s;
+  }
+  .main-discografia .card__container .card__shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 400px;
+    height: 100%;
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 70%, hsl(0, 0%, 0%) 100%);
+  }
+  .main-discografia .card__container .card__data {
+    color: white;
+    position: absolute;
+    left: 1.5rem;
+    bottom: 2rem;
+  }
+  .main-discografia .card__container .card__data .card__name {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+  }
+  .main-discografia .card__container .card__data .card__profession {
+    display: block;
+    font-size: 1rem;
+  }
+  .main-discografia .card__container .card__clip {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: red;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
     display: grid;
     place-items: center;
+    font-size: 1.5rem;
+    color: white;
+    z-index: 5;
+    cursor: pointer;
+    transition: transform 0.4s;
   }
-  /* fin GULP */
-} /* fin @media screen and (max-width: 575px) */
+  .main-discografia .card__container .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 3rem 1.5rem 1.5rem;
+    color: white;
+    clip-path: circle(10px at 92% 7%);
+    transition: clip-path 0.5s ease-in-out;
+  }
+  .main-discografia .card__container .info .info__name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .main-discografia .card__container .info .info__description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .main-discografia .card__container .info .info__button {
+    display: inline-flex;
+    background-color: red;
+    box-shadow: 0 0 12px rgba(255, 0, 17, 0.6392156863);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    color: white;
+    text-decoration: none;
+    transition: box-shadow 0.4s;
+  }
+  .main-discografia .card__container .info .info__button:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 17, 0.6392156863);
+  }
+  .main-discografia .card__container .info .info__social {
+    position: absolute;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    display: flex;
+    column-gap: 0.5rem;
+  }
+  .main-discografia .card__container .info .info__social .info__link {
+    background-color: red;
+    box-shadow: 0 0 12px rgba(255, 0, 17, 0.6392156863);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.75rem;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    color: white;
+    transition: transform 0.4s;
+  }
+  .main-discografia .card__container .info .info__social .info__link:hover {
+    transform: translateY(-0.25rem);
+  }
+  .main-discografia .info:hover, .main-discografia .card__clip:hover ~ .info {
+    clip-path: circle(100%);
+    border-radius: 2rem;
+  }
+}
+/* page GULP! */
+.main-gulp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100vw;
+  width: 100%;
+}
+.main-gulp h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-top: 5rem;
+  border-bottom: 5px solid red;
+  transition: 1s;
+}
+.main-gulp h1:hover {
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px 20px;
+  color: red;
+  scale: 1.2;
+  letter-spacing: 5px;
+}
+.main-gulp .disc-description {
+  max-width: 100%;
+  font-size: 3.5vw;
+  padding: 2rem;
+  margin: auto;
+  text-align: center;
+}
+.main-gulp .disc-table {
+  font-size: 3vw;
+  border: 1px solid rgba(0, 0, 0, 0.261);
+  border-radius: 0.5rem;
+}
+.main-gulp .disc-table table {
+  border-collapse: separate;
+  border-spacing: 5px;
+  background-color: #ececec;
+  border-radius: 0.5rem;
+  padding: 1vw;
+}
+.main-gulp .disc-table table .cabecera {
+  background-color: red;
+  text-align: center;
+  color: white;
+  font-size: 4vw;
+}
+.main-gulp .disc-table table .cabecera2 {
+  background-color: rgba(255, 0, 0, 0.604);
+  text-align: center;
+  font-weight: normal;
+  color: white;
+  font-size: minmax(1vw, 1.2vw);
+}
+.main-gulp .disc-songs {
+  padding: 3vw 0;
+  margin: 3vw 0;
+  font-size: 1vw;
+}
+.main-gulp .disc-songs h3 {
+  font-size: 5vw;
+}
+.main-gulp .disc-songs ol li {
+  padding: 5px 0;
+  font-size: 2.7vw;
+}
+.main-gulp .videos-container {
+  max-width: 90%;
+  align-self: center;
+}
+.main-gulp .videos-container iframe {
+  border-radius: 15px;
+  max-width: 100%;
+}
+.main-gulp .img-container1 {
+  display: none;
+}
+.main-gulp .img-container2 {
+  display: none;
+}
+.main-gulp #carouselExampleFade {
+  width: 90%;
+  margin: 5rem 0;
+}
+.main-gulp #carouselExampleFade img {
+  width: 100%;
+  border-radius: 15px;
+}
+.main-gulp .social iframe {
+  width: 100%;
+  height: 400px;
+  display: grid;
+  place-items: center;
+}
+
+/* fin GULP */
+/* fin @media screen and (max-width: 575px) */
 @media screen and (min-width: 576px) and (max-width: 780px) {
   .section__grid {
     display: flex;

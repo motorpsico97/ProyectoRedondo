@@ -635,24 +635,149 @@
     }
 }/* fin CONTACTO */
 /* page DISCOGRAFIA */
+
 .main-discografia{
-
     .card{
-        .container{
-            width: 90%;
-            grid-template-columns: 1fr;
+        img{
+            max-width: 100%;
         }
-        .card__data{
-
-            .card__name{
-                font-size: 2rem;
+        position: relative;
+        padding-block: 5rem;
+        .card__bg, .card__blur{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .card__container{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 2rem;
+        width: 90%;
+        .card__article{
+            position: relative;
+            border-radius: 2rem;
+            overflow: hidden;
+            &:hover .card__img{
+                transform: scale(1.1);
+            }
+            &:hover .card__clip{
+                transform: rotate(-45deg);
             }
         }
+        .card__img{
+            border-radius: 2rem;
+            transition: transform .4s;
+        }
+        .card__shadow{
+            position: absolute;
+            top: 0;
+            left: 0;   
+            width: 100%;
+            height: 100%;
+            background:linear-gradient(180deg, 
+            hsla(0,0%,0%,0)70%,
+            hsl(0,0%,0)100%);
+        }
+        .card__data{
+            color: white;
+            position: absolute;
+            left: 1.5rem;
+            bottom: 2rem;
+            .card__name{
+                font-size: 2rem;
+                margin-bottom: .25rem;
+            }
+            .card__profession{
+                display: block;
+                font-size: 1rem;
+            }
+        }
+        .card__clip{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: red;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            color: white;
+            z-index: 5;
+            cursor: pointer;
+            transition: transform .4s;
+        }
         .info{
-            clip-path: circle(8px at 93% 8%);
-            padding: 5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: hsla(0,0,0,.1);
+            backdrop-filter: blur(12px);
+            padding: 3rem 1.5rem 1.5rem;
+            color: white;
+            clip-path: circle(10px at 92% 7%);
+            transition: clip-path .5s ease-in-out;
+            .info__name{
+                font-size: 1.5rem;
+                margin-bottom: .5rem;
+            }
+            .info__description{
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+            .info__button{
+                display: inline-flex;
+                background-color: red;
+                box-shadow:0 0 12px #ff0011a3;
+                padding: .5rem .75rem;
+                border-radius: .5rem;
+                color: white;
+                text-decoration: none ;
+                transition: box-shadow .4s;
+                &:hover{
+                    box-shadow:0 0 20px #ff0011a3;
+                }
+            }
+            .info__social{
+                position: absolute;
+                left: 1.5rem;
+                bottom: 1.5rem;
+                display: flex;
+                column-gap: .5rem;
+                .info__link{
+                    background-color: red;
+                    box-shadow:0 0 12px #ff0011a3;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: .75rem;
+                    display: grid;
+                    place-items: center;
+                    font-size: 1.5rem;
+                    color: white;
+                    transition: transform .4s;
+                    &:hover{
+                        transform: translateY(-.25rem);
+                    }
+                }
+            }
+            
+        }
+        
     }
+    .info:hover, .card__clip:hover ~ .info{
+                clip-path: circle(100%);
+                border-radius: 2rem;
+            }
 }
+
 }
 /* page GULP! */
 .main-gulp{
@@ -752,7 +877,7 @@
     }
 }/* fin GULP */
 
-}/* fin @media screen and (max-width: 575px) */
+/* fin @media screen and (max-width: 575px) */
 ///
 /// 
 /// 
