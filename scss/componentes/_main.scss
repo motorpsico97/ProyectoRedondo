@@ -149,8 +149,10 @@
 /// 
 @media screen and (max-width: 575px){
     /* NOTICIAS */
+
 .section__grid{
-    width: 100%;
+    max-width: 100vw;
+    margin: auto;
     gap: 5vh;
     h2 {
         padding: 10px;
@@ -165,11 +167,10 @@
         background-color: $color-primary;
     }
     .grid__container{
-            width: 90%;
+            width: 80%;
             margin: auto;
         .grid__container-item{
                 border: 1px solid #b6b6b6;
-                border-radius: 0 0 1rem 1rem;
                 margin: 50px 0;
             .subgrid-item{
                     display: flex;
@@ -177,7 +178,7 @@
                     padding-bottom: 20px;
                     h3 {
                         margin-top: 1rem;
-                        font-size: 4vw;
+                        font-size: 4.5vw;
                         padding: 0 10px;
                     }
                     h4 {
@@ -196,29 +197,12 @@
                         width: 100%;
                         height: 200px;
                         object-fit: cover;
-                        border-radius: 0 0 0.5rem 0.5rem;
-                        box-shadow: 0 0 15px #484848;
+
                         transition: 1s;     
                     }
             }
             .grid__container-buttom{
-                display: flex;
-                justify-content: start;
-                a{
-                    font-size: 1.5vh;
-                    padding: 5px 15px;
-                    background-color: #910101;
-                    box-shadow: 3px 4px 0 0 #66221c;
-                    color: #ffff;
-                    border-radius: 4px;
-                    text-decoration: none;
-                    transition: 1s;
-                    margin: 0 0 10px 10px;
-                    :hover{
-                        background-color: #000000;
-                        box-shadow: 3px 4px 0 0 #484848;
-                    }
-                }
+                display: none;
             }
         }
     }
@@ -260,6 +244,7 @@
     .flex__container-discs{
         width: 90%;
         margin: 50px auto;
+
         .container-discs{
             border: 1px solid #a2a2a2;
             border-radius: 1rem;
@@ -277,6 +262,10 @@
                 width: 100vw;
                 border-radius: 1rem;
                 box-shadow: 0 0 15px #484848;
+                transition: .5s;
+                &:hover{
+                    transform: scale(1.1);
+                }
             }
             h4{
                 font-size: 3vw;
@@ -285,13 +274,19 @@
             }
             }
             p{
-                margin: 0 20px 5px 20px;
-                font-size: 3vw;
+                padding: 10px 50px;
+                font-size: 3.5vw;
                 text-align: justify;
             }
             a{
+                align-self: center;
+                text-align: center;
+                text-decoration: none;
+                color: $color-primary;
+            }
+            .disc-buttom{
                 font-size: 1.5vh;
-                background-color: #910101;
+                background-color: #d20000;
                 box-shadow: 3px 4px 0 0 #66221c;
                 padding: 5px 10px;
                 color: #ffff;
@@ -304,6 +299,9 @@
                     }
             }
         }
+        .disc-buttom{
+            display: none;
+        }
         .disc-buttom-container{
             display: flex;
             justify-content: center;
@@ -311,7 +309,7 @@
             a{
                 font-size: 2vh;
                 padding: 5px 15px;
-                background-color: #910101;
+                background-color: #d20000;
                 box-shadow: 3px 4px 0 0 #66221c;
                 color: #ffff;
                 border-radius: 4px;
@@ -349,7 +347,7 @@
         align-self: center;
         font-size: 2vh;
         padding: 5px 15px;
-        background-color: #910101;
+        background-color: #d20000;
         box-shadow: 3px 4px 0 0 #66221c;
         color: #ffff;
         border-radius: 4px;
@@ -486,6 +484,7 @@
             display: flex;
             justify-content: center;
             text-align: center;
+
             button{
                 border: 1px solid $color-primary;
                 padding: 5px;
@@ -496,6 +495,7 @@
                 font-size: 1rem;
             }
             input{
+            background-color: transparent;
             width: 70vw;
             height: 4vh;
             border: none;
@@ -635,32 +635,51 @@
     }
 }/* fin CONTACTO */
 /* page DISCOGRAFIA */
-
 .main-discografia{
+    max-width: 100%;
+    width: 90%;
+    margin: auto;
+    .main-discografia-title{
+        display: grid;
+        place-items: center;
+        h2{
+                max-width: 100vw;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 2.5rem; 
+                margin: 50px 0;
+                background-image: linear-gradient(rgb(255, 0, 0), rgb(255, 0, 0));
+                background-size: 100% 5px;
+                background-repeat: no-repeat;
+                background-position: 50% 0%;
+                transition: background-size .5s, background-position .5s ease-in-out;
+                &:hover {
+                    background-size: 100% 100%;
+                    background-position: 0% 100%;
+                    transition: background-position .7s, background-size .5s ease-in-out;
+                    color: white;
+            }
+        }
+    }    
     .card{
         img{
             max-width: 100%;
         }
         position: relative;
-        padding-block: 5rem;
-        .card__bg, .card__blur{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+        border: none;
     }
     .card__container{
         position: relative;
         display: grid;
-        grid-template-columns: 1fr;
+        place-items: center;
+        grid-template-columns: 1fr !important;
         justify-content: center;
-        gap: 2rem;
-        width: 90%;
+        gap: 5rem;
         .card__article{
+            max-width: 350px;
             position: relative;
-            border-radius: 2rem;
+            border-radius: 2.4rem;
+            border: 4px outset #afafaf;
             overflow: hidden;
             &:hover .card__img{
                 transform: scale(1.1);
@@ -689,7 +708,7 @@
             left: 1.5rem;
             bottom: 2rem;
             .card__name{
-                font-size: 2rem;
+                font-size: 1.2rem;
                 margin-bottom: .25rem;
             }
             .card__profession{
@@ -720,10 +739,10 @@
             width: 100%;
             height: 100%;
             background-color: hsla(0,0,0,.1);
-            backdrop-filter: blur(12px);
-            padding: 3rem 1.5rem 1.5rem;
+            backdrop-filter: blur(15px);
+            padding: 2rem 1.5rem 1.5rem;
             color: white;
-            clip-path: circle(10px at 92% 7%);
+            clip-path: circle(8px at 88% 9%);
             transition: clip-path .5s ease-in-out;
             .info__name{
                 font-size: 1.5rem;
@@ -736,9 +755,8 @@
             .info__button{
                 display: inline-flex;
                 background-color: red;
-                box-shadow:0 0 12px #ff0011a3;
-                padding: .5rem .75rem;
-                border-radius: .5rem;
+                box-shadow:0 0 12px #ff0011a3;                border-radius: .5rem;
+                font-size: .8rem;
                 color: white;
                 text-decoration: none ;
                 transition: box-shadow .4s;
@@ -777,8 +795,8 @@
                 border-radius: 2rem;
             }
 }
+}/* fin page DISCOGRAFIA */
 
-}
 /* page GULP! */
 .main-gulp{
     @include flex(flex,center, center, column);
@@ -1526,6 +1544,167 @@
             }
     }
 }/* fin GULP */
+/* page DISCOGRAFIA */
+.main-discografia{
+    max-width: 100%;
+    width: 90%;
+    margin: auto;
+    .main-discografia-title{
+        display: grid;
+        place-items: center;
+        h2{
+                max-width: 100vw;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 3.5rem; 
+                margin: 50px 0;
+                background-image: linear-gradient(rgb(255, 0, 0), rgb(255, 0, 0));
+                background-size: 100% 10px;
+                background-repeat: no-repeat;
+                background-position: 50% 0%;
+                transition: background-size .5s, background-position .5s ease-in-out;
+                &:hover {
+                    background-size: 100% 100%;
+                    background-position: 0% 100%;
+                    transition: background-position .7s, background-size .5s ease-in-out;
+                    color: white;
+            }
+        }
+    }    
+    .card{
+        img{
+            max-width: 100%;
+        }
+        position: relative;
+        border: none;
+    }
+    .card__container{
+        position: relative;
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr !important;
+        justify-content: center;
+        gap: 5rem;
+        .card__article{
+            max-width: 350px;
+            position: relative;
+            border-radius: 2.4rem;
+            border: 4px outset #afafaf;
+            overflow: hidden;
+            &:hover .card__img{
+                transform: scale(1.1);
+            }
+            &:hover .card__clip{
+                transform: rotate(-45deg);
+            }
+        }
+        .card__img{
+            border-radius: 2rem;
+            transition: transform .4s;
+        }
+        .card__shadow{
+            position: absolute;
+            top: 0;
+            left: 0;   
+            width: 100%;
+            height: 100%;
+            background:linear-gradient(180deg, 
+            hsla(0,0%,0%,0)70%,
+            hsl(0,0%,0)100%);
+        }
+        .card__data{
+            color: white;
+            position: absolute;
+            left: 1.5rem;
+            bottom: 2rem;
+            .card__name{
+                font-size: 1.2rem;
+                margin-bottom: .25rem;
+            }
+            .card__profession{
+                display: block;
+                font-size: 1rem;
+            }
+        }
+        .card__clip{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: red;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            color: white;
+            z-index: 5;
+            cursor: pointer;
+            transition: transform .4s;
+        }
+        .info{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: hsla(0,0,0,.1);
+            backdrop-filter: blur(15px);
+            padding: 2rem 1.5rem 1.5rem;
+            color: white;
+            clip-path: circle(8px at 88% 9%);
+            transition: clip-path .5s ease-in-out;
+            .info__name{
+                font-size: 1.5rem;
+                margin-bottom: .5rem;
+            }
+            .info__description{
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+            .info__button{
+                display: inline-flex;
+                background-color: red;
+                box-shadow:0 0 12px #ff0011a3;                border-radius: .5rem;
+                font-size: .8rem;
+                color: white;
+                text-decoration: none ;
+                transition: box-shadow .4s;
+                &:hover{
+                    box-shadow:0 0 20px #ff0011a3;
+                }
+            }
+            .info__social{
+                position: absolute;
+                left: 1.5rem;
+                bottom: 1.5rem;
+                display: flex;
+                column-gap: .5rem;
+                .info__link{
+                    background-color: red;
+                    box-shadow:0 0 12px #ff0011a3;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: .75rem;
+                    display: grid;
+                    place-items: center;
+                    font-size: 1.5rem;
+                    color: white;
+                    transition: transform .4s;
+                    &:hover{
+                        transform: translateY(-.25rem);
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    .info:hover, .card__clip:hover ~ .info{
+                clip-path: circle(100%);
+                border-radius: 2rem;
+            }
+}/* fin page DISCOGRAFIA */
 }/* fin @media screen and (min-width: 576px) and (max-width:780px)*/
 ///
 /// 
@@ -2222,7 +2401,166 @@
         grid-row-start: 8;
     }
 }/* fin GULP */
-
+/* page DISCOGRAFIA */
+.main-discografia{
+    max-width: 100%;
+    width: 90%;
+    margin: auto;
+    .main-discografia-title{
+        display: grid;
+        place-items: center;
+        h2{
+                max-width: max-content;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 5em; 
+                margin: 50px 0;
+                background-image: linear-gradient(rgb(255, 0, 0), rgb(255, 0, 0));
+                background-size: 100% 10px;
+                background-repeat: no-repeat;
+                background-position: 50% 0%;
+                transition: background-size .5s, background-position .5s ease-in-out;
+                &:hover {
+                    background-size: 100% 100%;
+                    background-position: 0% 100%;
+                    transition: background-position .7s, background-size .5s ease-in-out;
+                    color: white;
+            }
+        }
+    }    
+    .card{
+        img{
+            max-width: 100%;
+        }
+        position: relative;
+        border: none;
+    }
+    .card__container{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        justify-content: center;
+        gap: 5rem;
+        .card__article{
+            max-width: 350px;
+            position: relative;
+            border-radius: 2.4rem;
+            border: 4px outset #afafaf;
+            overflow: hidden;
+            &:hover .card__img{
+                transform: scale(1.1);
+            }
+            &:hover .card__clip{
+                transform: rotate(-45deg);
+            }
+        }
+        .card__img{
+            border-radius: 2rem;
+            transition: transform .4s;
+        }
+        .card__shadow{
+            position: absolute;
+            top: 0;
+            left: 0;   
+            width: 100%;
+            height: 100%;
+            background:linear-gradient(180deg, 
+            hsla(0,0%,0%,0)70%,
+            hsl(0,0%,0)100%);
+        }
+        .card__data{
+            color: white;
+            position: absolute;
+            left: 1.5rem;
+            bottom: 2rem;
+            .card__name{
+                font-size: 1.2rem;
+                margin-bottom: .25rem;
+            }
+            .card__profession{
+                display: block;
+                font-size: 1rem;
+            }
+        }
+        .card__clip{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: red;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            color: white;
+            z-index: 5;
+            cursor: pointer;
+            transition: transform .4s;
+        }
+        .info{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: hsla(0,0,0,.1);
+            backdrop-filter: blur(15px);
+            padding: 2rem 1.5rem 1.5rem;
+            color: white;
+            clip-path: circle(8px at 88% 9%);
+            transition: clip-path .5s ease-in-out;
+            .info__name{
+                font-size: 1.5rem;
+                margin-bottom: .5rem;
+            }
+            .info__description{
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+            .info__button{
+                display: inline-flex;
+                background-color: red;
+                box-shadow:0 0 12px #ff0011a3;                border-radius: .5rem;
+                font-size: .8rem;
+                color: white;
+                text-decoration: none ;
+                transition: box-shadow .4s;
+                &:hover{
+                    box-shadow:0 0 20px #ff0011a3;
+                }
+            }
+            .info__social{
+                position: absolute;
+                left: 1.5rem;
+                bottom: 1.5rem;
+                display: flex;
+                column-gap: .5rem;
+                .info__link{
+                    background-color: red;
+                    box-shadow:0 0 12px #ff0011a3;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: .75rem;
+                    display: grid;
+                    place-items: center;
+                    font-size: 1.5rem;
+                    color: white;
+                    transition: transform .4s;
+                    &:hover{
+                        transform: translateY(-.25rem);
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    .info:hover, .card__clip:hover ~ .info{
+                clip-path: circle(100%);
+                border-radius: 2rem;
+            }
+}/* fin page DISCOGRAFIA */
 }/* fin @media screen and (min-width: 781px) and (max-width: 1200px)*/
 ///
 /// 
@@ -2368,6 +2706,13 @@
                 margin: 10px 0;
             }
             a{
+                align-self: center;
+                text-align: center;
+                text-decoration: none;
+                color: $color-primary;
+            }
+            }
+            .disc-buttom{
                 font-size: .8rem;
                 text-decoration: none;
                 background-color: #910101;
@@ -2590,14 +2935,14 @@
 .main__noticias{
     max-width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 500px;
+    grid-template-columns: 1fr 350px;
     grid-template-rows: auto;
     grid-template-areas: 
     "news aside"
     ;
     .section-container-noticias{
         max-width: 100%;
-        gap: 30px ;
+        gap: 50px ;
         width: 70%;
         margin: auto;
         grid-area: news;
@@ -2634,13 +2979,12 @@
             align-items: start;
             align-content: start; 
             grid-template-columns: 250px 1fr;
-            padding: 25px;
-            gap: 30px;
-            border-bottom: 1px solid $color-primary;
+            padding: 10px 0;
+            border-bottom: 1px solid #acacac;
                 img{
                     grid-row: span 3 / span 3;
                     max-width: 100%;
-                    width: 250px;
+                    width: 200px;
                     object-fit: cover;
                     place-items: center;
                     align-self: center;
@@ -2672,7 +3016,48 @@
     }
     .aside-noticias{
         grid-area: aside;
-        background-color: red;
+        position: sticky;
+        margin: 50px auto;
+        padding-right: 20px;
+        width: 90%;
+        div{
+                padding: 50px 0;
+                border-bottom: 1px solid grey;
+            }
+        h2{
+                font-size: 1.3rem;
+            }
+        a{
+                text-decoration: none;
+            }
+            
+            li{
+                list-style: none;
+                margin: 1rem 0;
+            }
+        .aside-suscribe{
+            h2{
+                background-color: #000000;
+                color: white;
+                padding: 5px;
+                text-align: justify;
+                border-radius: 5px;
+                font-size: 1.3rem;
+            }
+            input{
+                width: 100%;
+                margin-top: 10px;
+                padding: 10px;
+            }
+            button{
+                font-size: 1rem;
+                margin-top: 10px;
+                background-color: $color-terciary;
+                color: white;
+                padding: 5px;
+                border-radius: 5px;
+            }
+        }
     }
 }/* fin page NOTICIAS */
 
@@ -2756,81 +3141,35 @@
             }
         }
     }
-}/* fin CONTACTO */
-/* page DISCOGRAFIA */
-/* .main-discografia{
-    max-width: 100vw;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 5vw;
-    .discografia-container{
-        @include flex(flex, flex-start, flex-start, column);
-            h2{
-                width: 100%;
-                padding: 50px;
-                color: rgb(255, 255, 255);
-                background-image: url("../img/banderas.jpg");
-                background-size: contain;
-                font-size: 4rem;
-                font-weight: 800;
-                margin: 50px 0;
-            }
-        .discos-container{
-            @include flex(flex, space-around, flex-start, row);
-            flex-wrap: wrap;
-            flex-basis: 300px;
-            gap: 60px;
-        }
-        .discos-items{
-            max-width: 300px;
-            width: 300px;
-            height: 466px;
-            border: 1px solid grey;
-            border-radius: 15px;
-            .discos-items-description{
-                @include flex(flex, center, center, column);
-                text-align: baseline;
-                a{
-                    text-decoration: none;
-                    color: $color-primary;
-                }
-                i{
-                    font-size: 1.6rem;
-                    transition: .7s;
-                    &:hover{
-                        scale: 1.2;
-                        color: red;
-                    }
-                }
-            }
-            h3{
-                font-size: 1.2rem;
-                font-weight: 600;
-                text-align: center;
-                margin: 15px 0;
-            }
-            p{
-                font-size: 1rem;
-            }
-            img{
-                max-width: 100%;
-                border-radius: 15px;
-                transition: .6s;
-                &:hover{
-                    opacity: .9;
-                    scale: .93;
-                    border: 3px solid rgb(150, 150, 150);
-                }
-            }
-        }
-    }
-    .buttom_container-home{
-        display: none;
-    }
-}
- */
-/// /* page DISCOGRAFIA */
+}/* fin CONTACTO */ 
+/* page DISCOGRAFÍA */
 .main-discografia{
+    max-width: 100%;
+    width: 90%;
+    margin: auto;
+    .main-discografia-title{
+        display: grid;
+        place-items: center;
+        h2{
+                max-width: max-content;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 5em; 
+                margin: 50px 0;
+                background-image: linear-gradient(rgb(255, 0, 0), rgb(255, 0, 0));
+                background-size: 100% 10px;
+                background-repeat: no-repeat;
+                background-position: 50% 0%;
+                transition: background-size .5s, background-position .5s ease-in-out;
+                &:hover {
+                    background-size: 100% 100%;
+                    background-position: 0% 100%;
+                    transition: background-position .7s, background-size .5s ease-in-out;
+                    color: white;
+            }
+        }
+    
+    }    
     .card{
         img{
             max-width: 100%;
@@ -2841,10 +3180,12 @@
     .card__container{
         position: relative;
         display: grid;
-        grid-template-columns: repeat(3, 350px);
+        grid-template-columns: repeat(3, minmax(200px,400px)) ;
         justify-content: center;
         gap: 5rem;
         .card__article{
+
+            max-width: 300px;
             position: relative;
             border-radius: 2.4rem;
             border: 4px outset #afafaf;
@@ -2963,7 +3304,7 @@
                 clip-path: circle(100%);
                 border-radius: 2rem;
             }
-}
+}/* fin page DISCOGRAFIA */
 /* page GULP! */
 .main-gulp{
     display: grid;
@@ -3008,7 +3349,7 @@
             border-spacing: 5px;
             background-color: #ececec;
             border-radius: .5rem;
-            padding: 1vw;
+            padding: 1vw;   
             .cabecera{
                 background-color: red; 
                 text-align: center; 
@@ -3038,6 +3379,7 @@
         ol{
             li{
                 padding: 5px 0;
+                font-size: 1vw;
             }
         }
     }
@@ -3103,7 +3445,7 @@
 }/* fin GULP */
 
 
-}/* fin @media screen and (min-width: 1201px)*/
+/* fin @media screen and (min-width: 1201px)*/
 ///
 /// 
 /// 
