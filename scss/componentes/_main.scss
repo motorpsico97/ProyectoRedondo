@@ -233,17 +233,16 @@
 }
  /* DISCOS */
 .section__discs{
-        width: 100%;
-        gap: 5vh;
-        overflow: hidden;
+    width: 100%;
+    margin: 5vw auto;
     h2{
         padding: 10px;
-        position: sticky;
-        top: 78px;
+        position: sticky !important;
+        top: 78px !important;
         font-size: 5vw;
         font-weight: 600;
         color: #ffff !important;
-        margin-top: 5vh;
+        margin-top: 10vh;
         background-color: $color-primary;
     }
     .flex__container-discs{
@@ -281,7 +280,7 @@
             
             p{
                 padding: 10px 50px;
-                font-size: 3.5vw;
+                font-size: calc(15px + 0.390625vw);
                 text-align: justify;
             }
             a{
@@ -345,11 +344,12 @@
         font-size: 5vw !important;
         font-weight: 600;
         color: #ffff !important;
-        margin-top: 5vh;
+
         background-color: $color-primary;
         border-radius: 0 !important;
     }
     .videos {
+    margin-top: 50px;
         iframe {
             margin: 20px 0;
             max-width: 100%;
@@ -1088,12 +1088,14 @@
             }
             
         }
-        .disc-buttom-container{
+        
+    }
+    .disc-buttom-container{
         display: flex;
         align-self: center;
         margin: 50px 0;
             a {
-                font-size: 2vh;
+                font-size: 1rem;
                 padding: 10px 15px;
                 background-color: #910101;
                 box-shadow: 3px 4px 0 0 #66221c;
@@ -1107,7 +1109,6 @@
             }
         }
     }
-    }
 }/* fin discos */
 .videos-container {
     @include flex(flex, space-between, center, column);
@@ -1120,7 +1121,6 @@
         width: 100% !important;
         padding: 10px;
         border-radius: 0 !important;
-        position: sticky;
         top: 78px;
         font-size: 5vw;
         font-weight: 600;
@@ -1876,7 +1876,7 @@
                 }
             }
             .disc-title{
-                font-size: clamp(1rem, -3.6471rem + 15.6863vw, 2rem);
+                font-size: clamp(1rem, -3.6471rem + 15.6863vw, 1.8rem);
                 font-weight: 600;
                 order: 1;
                 grid-column: span 2 / span 2;
@@ -1919,12 +1919,13 @@
             }
             
         }
-        .disc-buttom-container{
+    }
+    .disc-buttom-container{
         display: flex;
         align-self: center;
         margin: 50px 0;
             a {
-                font-size: 2vh;
+                font-size: 1rem;
                 padding: 10px 15px;
                 background-color: #910101;
                 box-shadow: 3px 4px 0 0 #66221c;
@@ -1935,10 +1936,9 @@
             &:hover {
                 background-color: #000000;
                 box-shadow: 3px 4px 0 0 #484848;
+                }
             }
         }
-    }
-    }
 }
 .videos-container {
     @include flex(flex, center, start, column);

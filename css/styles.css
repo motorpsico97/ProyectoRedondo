@@ -167,7 +167,7 @@ header .hero__container #img2 {
 }
 
 /* NAV  */
-@container header (min-width: 768px) {
+@container header (min-width: 781px) {
   header .header__open-nav-button {
     display: none;
   }
@@ -191,7 +191,7 @@ header .hero__container #img2 {
   }
   /* fin HEADER */
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 781px) {
   header .header__nav-list {
     text-align: center;
     gap: 20px;
@@ -202,7 +202,7 @@ header .hero__container #img2 {
     font-size: 2rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 781px) {
   header .header__checkbox {
     display: none;
   }
@@ -343,7 +343,7 @@ header .hero__container #img2 {
   .hero__container #img1 {
     display: none;
   }
-  .hero__container #img2 {
+  .hero__container #img3 {
     display: block;
     position: absolute;
     max-width: 100vw;
@@ -351,7 +351,7 @@ header .hero__container #img2 {
     height: 100vh;
     object-fit: cover;
   }
-  .hero__container #img3 {
+  .hero__container #img2 {
     display: none;
   }
 }
@@ -890,18 +890,17 @@ header .hero__container #img2 {
   /* DISCOS */
   .section__discs {
     width: 100%;
-    gap: 5vh;
-    overflow: hidden;
+    margin: 5vw auto;
     /* fin DISCOS */
   }
   .section__discs h2 {
     padding: 10px;
-    position: sticky;
-    top: 78px;
+    position: sticky !important;
+    top: 78px !important;
     font-size: 5vw;
     font-weight: 600;
     color: white !important;
-    margin-top: 5vh;
+    margin-top: 10vh;
     background-color: #000000;
   }
   .section__discs .flex__container-discs {
@@ -943,7 +942,7 @@ header .hero__container #img2 {
   }
   .section__discs .flex__container-discs .container-discs p {
     padding: 10px 50px;
-    font-size: 3.5vw;
+    font-size: calc(15px + 0.390625vw);
     text-align: justify;
   }
   .section__discs .flex__container-discs .container-discs a {
@@ -1007,9 +1006,11 @@ header .hero__container #img2 {
     font-size: 5vw !important;
     font-weight: 600;
     color: white !important;
-    margin-top: 5vh;
     background-color: #000000;
     border-radius: 0 !important;
+  }
+  .videos-container .videos {
+    margin-top: 50px;
   }
   .videos-container .videos iframe {
     margin: 20px 0;
@@ -1746,13 +1747,13 @@ header .hero__container #img2 {
     grid-column-start: 2;
     grid-row-start: 3;
   }
-  .section__discs .flex__container-discs .disc-buttom-container {
+  .section__discs .disc-buttom-container {
     display: flex;
     align-self: center;
     margin: 50px 0;
   }
-  .section__discs .flex__container-discs .disc-buttom-container a {
-    font-size: 2vh;
+  .section__discs .disc-buttom-container a {
+    font-size: 1rem;
     padding: 10px 15px;
     background-color: #910101;
     box-shadow: 3px 4px 0 0 #66221c;
@@ -1761,7 +1762,7 @@ header .hero__container #img2 {
     text-decoration: none;
     transition: 1s;
   }
-  .section__discs .flex__container-discs .disc-buttom-container a:hover {
+  .section__discs .disc-buttom-container a:hover {
     background-color: #000000;
     box-shadow: 3px 4px 0 0 #484848;
   }
@@ -1781,7 +1782,6 @@ header .hero__container #img2 {
     width: 100% !important;
     padding: 10px;
     border-radius: 0 !important;
-    position: sticky;
     top: 78px;
     font-size: 5vw;
     font-weight: 600;
@@ -2538,7 +2538,7 @@ header .hero__container #img2 {
     box-shadow: 0 0 15px rgb(100, 100, 100);
   }
   .section__discs .flex__container-discs .container-discs .disc-title {
-    font-size: clamp(1rem, -3.6471rem + 15.6863vw, 2rem);
+    font-size: clamp(1rem, -3.6471rem + 15.6863vw, 1.8rem);
     font-weight: 600;
     order: 1;
     grid-column: span 2/span 2;
@@ -2579,13 +2579,13 @@ header .hero__container #img2 {
     grid-column-start: 2;
     grid-row-start: 3;
   }
-  .section__discs .flex__container-discs .disc-buttom-container {
+  .section__discs .disc-buttom-container {
     display: flex;
     align-self: center;
     margin: 50px 0;
   }
-  .section__discs .flex__container-discs .disc-buttom-container a {
-    font-size: 2vh;
+  .section__discs .disc-buttom-container a {
+    font-size: 1rem;
     padding: 10px 15px;
     background-color: #910101;
     box-shadow: 3px 4px 0 0 #66221c;
@@ -2594,7 +2594,7 @@ header .hero__container #img2 {
     text-decoration: none;
     transition: 1s;
   }
-  .section__discs .flex__container-discs .disc-buttom-container a:hover {
+  .section__discs .disc-buttom-container a:hover {
     background-color: #000000;
     box-shadow: 3px 4px 0 0 #484848;
   }
