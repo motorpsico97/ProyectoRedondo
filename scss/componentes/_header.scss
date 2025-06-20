@@ -74,13 +74,6 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* background-image: url("../img/portada/fondo.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow: hidden; */
-
     h1 {
         font-size: 20vw;
         letter-spacing: .5vw;
@@ -218,8 +211,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url("../img/portada/fondo.png");
-    height: 100vh;
+    height: 80dvh;
     overflow: hidden;
 
     h1 {
@@ -258,7 +250,7 @@ header{
         position: absolute;
         max-width: 100vw;
         width: 100%;
-        height: 100vh;
+        height: 80dvh;
         object-fit: cover;
     }
     #img2{
@@ -373,7 +365,7 @@ header{
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    height: 100vh;
+    height: 831px;
     h1 {
         font-size: 20vw;
         z-index: 2;
@@ -450,7 +442,7 @@ header{
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    height: 800px;
+    height: 900px;
     overflow: hidden; 
     h1 {
         font-size: 15vw;
@@ -474,22 +466,26 @@ header{
         }
     }
     h2{
-        font-size: 4vh;
+        font-size: clamp(1rem, -2.7279rem + 7.6372vw, 2rem);
         position: absolute;
-        top: 22vw;
-        left: 30vw;
+        margin: 22vw 25vw;
         color: white;
         letter-spacing: 3px;
-        transform: translateY(200px);
         z-index: 1;
     }
-    #img1 {
+    #img2 {
+        display: none;
+    }
+    #img1{
         display: block;
         position: absolute;
         max-width: 100vw;
         width: 100%;
-        height: 925px;
+        height: 900px;
         object-fit: cover;
+    }
+    #img3{
+        display: none;
     }
 }
 
@@ -517,7 +513,7 @@ header{
 ///
 /// 
 /// 
-@media screen and (min-width: 1400px) and (max-width: 1920px){
+@media screen and (min-width: 1401px) and (max-width:1900px){
     /* HERO */
     .hero__container {
     display: flex;
@@ -525,6 +521,7 @@ header{
     justify-content: space-between;
     position: relative;
     height: 100vh;
+    height: 1160px;
     h1 {
         font-size: 15vw;
         z-index: 2;
@@ -547,22 +544,26 @@ header{
         }
     }
     h2{
-        font-size: 4vh;
+        font-size: clamp(1rem, -2.7279rem + 7.6372vw, 2.8rem);
         position: absolute;
-        top: 20vw;
-        left: 30vw;
+        margin: 23vw 20vw;
         color: white;
         letter-spacing: 3px;
-        transform: translateY(200px);
         z-index: 1;
     }
-    #img1 {
+    #img2 {
+        display: none;
+    }
+    #img1{
         display: block;
         position: absolute;
         max-width: 100vw;
         width: 100%;
-        height: 925px;
+        height: 1160px;
         object-fit: cover;
+    }
+    #img3{
+        display: none;
     }
 
 }
@@ -592,20 +593,16 @@ header{
 ///
 /// 
 /// 
-@media screen and (min-width: 1920px){
-    /* HERO */
+
+@media screen and (min-width: 1901px){
+/* HERO */
     .hero__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
     height: 100vh;
-    background-image: url("/img/portada3.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow: hidden;
+    height: 1150px;
     h1 {
         font-size: 15vw;
         z-index: 2;
@@ -613,6 +610,7 @@ header{
         font-family: 'Engagement' !important;
         margin: 5rem auto;
         color: #fff;
+        filter: drop-shadow(1px 1px 20px rgba(249, 248, 176, 0.264));
         background: linear-gradient(45deg, #000000, #930018, #a4007b, #ff012b, #000000);
         background-size: 200%;
         background-clip: text;
@@ -627,22 +625,29 @@ header{
         }
     }
     h2{
-        font-size: 3.5vh;
+        font-size: clamp(1rem, -2.7279rem + 7.6372vw, 2.8rem);
         position: absolute;
-        top: 20vw;
-        left: 35vw;
+        margin: 20vw 30vw;
         color: white;
-        letter-spacing: 3px;
-        transform: translateY(200px);
-    }
-    #img1 {
-        display: none;
+        letter-spacing: 7px;
+        z-index: 1;
     }
     #img2 {
         display: none;
     }
-}
+    #img1{
+        display: block;
+        position: absolute;
+        max-width: 100vw;
+        width: 100%;
+        height: 1150px;
+        object-fit: cover;
+    }
+    #img3{
+        display: none;
+    }
 
+}
 
     /* BANNER */
     .banner {
@@ -650,8 +655,8 @@ header{
         width: 100vw;
         background-color: $color-primary;
         .banner-description {
-            padding: 1rem;
-            font-size: 1.3vw;
+            padding: 1.5rem;
+            font-size: 1vw;
             font-weight: 700;
             color: #fff;
             text-align: center;
@@ -659,11 +664,9 @@ header{
             letter-spacing: 2vw;
         }
         img{
+            max-width: 100%;
             display: none;
-            width: 100vw;
         }
 }
-}/* FIN @media screen and (min-width: 1920px)*/
-///
-/// 
-///
+
+}
