@@ -1,0 +1,59 @@
+/* Selections */
+p::selection {
+    background-color: #000000;
+    color: #ff0000;
+}
+
+h1::selection {
+    background-color: #000000;
+    color: #ff0000;
+}
+
+h2::selection {
+    background-color: #000000;
+    color: #ff0000;
+}
+
+h3::selection {
+    background-color: #000000;
+    color: #ff0000;
+}
+
+h4::selection {
+    background-color: #000000;
+    color: #ff0000;
+}
+
+h5::selection {
+    background-color: #000000;
+    color: #ff0000;
+}
+
+h6::selection {
+    background-color: #000000;
+    color: #ff0000;
+}
+
+a::selection {
+    background-color: #000000;
+    color: #ff0000;
+}
+
+
+
+/* VARIABLES */
+
+
+$color-primary: #000000;
+$color-secundary: #ff0000;
+$color-terciary: #5c0000;
+
+
+/* MIXIN */
+
+@mixin flex($flex, $justify, $align, $direction){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
