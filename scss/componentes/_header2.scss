@@ -115,6 +115,7 @@ header{
 //////////////////////////// 
 /// ////////////////////////
 /* NAV  */
+/* min-width: 781px */
 @container header (min-width: 781px) {
     header {
         .header__open-nav-button {
@@ -143,8 +144,11 @@ header{
     }
 
     /* fin HEADER */
-}
-
+}/*  FIN min-width: 781px */
+/* FIN NAV */
+///
+/// 
+/* max-width: 781px */
 @media screen and (max-width: 781px) {
     header {
         .header__nav-list {
@@ -158,7 +162,10 @@ header{
             }
         }
     }
-} 
+} /*  FIN max-width: 781px */
+///
+/// 
+/* min-width: 781px */
 @media screen and (min-width: 781px) {
     header {
         .header__checkbox {
@@ -198,21 +205,19 @@ header{
             }
         }
     }
-}
-/* fin - NAV  */
+}/* fin - NAV  */
 /// 
 /// 
 /// 
-/// HEADER ///
-@media screen and (max-width: 575px){
-    /* HERO */
+/* HEADER */
+@media screen and (max-width: 320px) {
+/* HERO */
 .hero__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 80dvh;
-    overflow: hidden;
-
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 85dvh;
+overflow: hidden;
     h1 {
         font-size: 20vw;
         letter-spacing: .5vw;
@@ -234,7 +239,6 @@ header{
         }
     }
     h2{
-        font-size: 2.2vh;
         position: absolute;
         margin: 11rem 10vh;
         color: white;
@@ -249,7 +253,7 @@ header{
         position: absolute;
         max-width: 100vw;
         width: 100%;
-        height: 80dvh;
+        height: 85dvh;
         object-fit: cover;
     }
     #img2{
@@ -260,38 +264,38 @@ header{
         max-width: 100%;
         width: 100vw;
         background-color: $color-primary;
+        padding: 10px 0;
+        align-items: center;
         p {
-            font-size: 3vw !important;
             font-weight: 700;
             color: #ff0000 ;
             text-align: center;
             font-family: "Montserrat" !important;
-            letter-spacing: 2vw;
+            letter-spacing: 5px;
+            margin: 0;
         }
         img{
             max-width: 100%;
             width: 100vw;
         }
-}
-}/* FIN @media screen and (max-width: 575px) */
+}/* fin HERO */
+}/* FIN max-width: 320px */
 ///
 /// 
-/// 
-/// 
-/// 
-@media screen and (min-width: 576px) and (max-width: 780px){
+/* QUERIES Mobile M */
+@media screen and (min-width: 321px) and (max-width: 375px) {
  /* HERO */
-    .hero__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-    height: 100vh;
+.hero__container {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 85dvh;
+overflow: hidden;
     h1 {
         font-size: 20vw;
         letter-spacing: .5vw;
         font-family: 'Engagement' !important;
-        margin: 5rem auto;
+        margin: 4.5rem auto;
         color: #fff;
         background: linear-gradient(45deg, #000000, #930018, #a4007b, #ff012b, #000000);
         background-size: 200%;
@@ -308,9 +312,8 @@ header{
         }
     }
     h2{
-        font-size: 4vw;
         position: absolute;
-        margin: 35vw 10vh;
+        margin: 11rem 10vh;
         color: white;
         letter-spacing: 3px;
         z-index: 1;
@@ -323,48 +326,183 @@ header{
         position: absolute;
         max-width: 100vw;
         width: 100%;
-        height: 100vh;
+        height: 85dvh;
         object-fit: cover;
     }
     #img2{
         display: none;
     }
 }
-}
-
-    /* BANNER */
-    .banner {
+.banner {
         max-width: 100%;
         width: 100vw;
         background-color: $color-primary;
-        .banner-description {
-            padding: 1.5rem;
-            font-size: 2vw;
+        padding: 10px 0;
+        align-items: center;
+        p {
             font-weight: 700;
-            color: #fff;
+            color: #ff0000 ;
             text-align: center;
             font-family: "Montserrat" !important;
-            letter-spacing: 2vw;
+            letter-spacing: 5px;
+            margin: 0;
+        }
+        img{
+            max-width: 100%;
+            width: 100vw;
+        }
+}   
+}
+/* QUERIES Mobile L */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+.hero__container {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 85dvh;
+overflow: hidden;
+    h1 {
+        font-size: 20vw;
+        letter-spacing: .5vw;
+        font-family: 'Engagement' !important;
+        margin: 4.5rem auto;
+        color: #fff;
+        background: linear-gradient(45deg, #000000, #930018, #a4007b, #ff012b, #000000);
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 4s;
+        animation: h1gradient 2.5s linear infinite;
+        z-index: 1;
+        @keyframes h1gradient {
+            to {
+                background-position: 200%;
+            }
+        }
+    }
+    h2{
+        position: absolute;
+        margin: 11rem 10vh;
+        color: white;
+        letter-spacing: 3px;
+        z-index: 1;
+    }
+    #img1 {
+        display: none;
+    }
+    #img3{
+        display: block;
+        position: absolute;
+        max-width: 100vw;
+        width: 100%;
+        height: 85dvh;
+        object-fit: cover;
+    }
+    #img2{
+        display: none;
+    }
+}
+.banner {
+        max-width: 100%;
+        width: 100vw;
+        background-color: $color-primary;
+        padding: 10px 0;
+        align-items: center;
+        p {
+            font-weight: 700;
+            color: #ff0000 ;
+            text-align: center;
+            font-family: "Montserrat" !important;
+            letter-spacing: 5px;
+            margin: 0 !important;
         }
         img{
             max-width: 100%;
             width: 100vw;
         }
 }
-/* FIN @media screen and (min-width: 576px) and (max-width: 780px)*/
-///
-/// 
-/// 
-/// 
-///
-@media screen and (min-width: 781px) and (max-width: 1200px){
-/* HERO */
-    .hero__container {
+}
+/* QUERIES Tablet */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+ /* HERO */
+.hero__container {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 85dvh;
+overflow: hidden;
+    h1 {
+        font-size: 20vw;
+        letter-spacing: .5vw;
+        font-family: 'Engagement' !important;
+        margin: 4.5rem auto;
+        color: #fff;
+        background: linear-gradient(45deg, #000000, #930018, #a4007b, #ff012b, #000000);
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 4s;
+        animation: h1gradient 2.5s linear infinite;
+        z-index: 1;
+        @keyframes h1gradient {
+            to {
+                background-position: 200%;
+            }
+        }
+    }
+    h2{
+        position: absolute;
+        margin: 15rem 10vh;
+        color: white;
+        letter-spacing: 3px;
+        z-index: 1;
+    }
+    #img1 {
+        display: none;
+    }
+    #img3{
+        display: block;
+        position: absolute;
+        max-width: 100vw;
+        width: 100%;
+        height: 85dvh;
+        object-fit: cover;
+        object-position: top;
+    }
+    #img2{
+        display: none;
+    }
+}
+.banner {
+        max-width: 100%;
+        width: 100vw;
+        background-color: $color-primary;
+        padding: 10px 0;
+        align-items: center;
+        p {
+            font-weight: 700;
+            color: #ff0000 ;
+            text-align: center;
+            font-family: "Montserrat" !important;
+            letter-spacing: 5px;
+            margin: 0 !important;
+        }
+        img{
+            max-width: 100%;
+            width: 100vw;
+        }
+} 
+}
+/* QUERIES Laptop   */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+.hero__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    height: 831px;
+    height: 83dvh;
     h1 {
         font-size: 20vw;
         z-index: 2;
@@ -399,19 +537,17 @@ header{
     #img2{
         display: block;
         position: absolute;
+        object-position: top;
         max-width: 100vw;
         width: 100%;
-        height: 831px;
+        height: 83dvh;
         object-fit: cover;
     }
     #img3{
         display: none;
     }
-}
-}
-
-    /* BANNER */
-    .banner {
+} 
+.banner {
         max-width: 100%;
         width: 100vw;
         background-color: $color-primary;
@@ -424,24 +560,17 @@ header{
             font-family: "Montserrat" !important;
             letter-spacing: 2vw;
         }
-        img{
-            max-width: 100%;
-            width: 100vw;
-            display: none;
-        }
 }
-/* FIN @media screen and (min-width: 781px) and (max-width: 1200px)*/
-///
-/// 
-/// 
-@media screen and (min-width: 1201px) and (max-width: 1400px){
-    /* HERO */
+}
+/* QUERIES Desktop */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+/* HERO */
     .hero__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    height: 900px;
+    height: 83dvh;
     overflow: hidden; 
     h1 {
         font-size: 15vw;
@@ -487,16 +616,14 @@ header{
         display: none;
     }
 }
-
-
-    /* BANNER */
+/* BANNER */
     .banner {
         max-width: 100%;
         width: 100vw;
         background-color: $color-primary;
         .banner-description {
             padding: 1rem;
-            font-size: 1.5vw;
+            font-size: 1vw;
             font-weight: 700;
             color: #fff;
             text-align: center;
@@ -508,21 +635,19 @@ header{
             display: none;
         }
 }
-}/* FIN @media screen and (min-width: 1201px) and (max-width: 1400px)*/
-///
-/// 
-/// 
-@media screen and (min-width: 1401px) and (max-width:1900px){
-    /* HERO */
+}
+/* QUERIES Desktop L */
+@media screen and (min-width: 1441px){
+/* HERO */
     .hero__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    height: 100vh;
-    height: 1160px;
+    height: 86dvh;
+    overflow: hidden; 
     h1 {
-        font-size: 15vw;
+        font-size: 8vw;
         z-index: 2;
         letter-spacing: .5vw;
         font-family: 'Engagement' !important;
@@ -543,9 +668,9 @@ header{
         }
     }
     h2{
-        font-size: clamp(1rem, -2.7279rem + 7.6372vw, 2.8rem);
+        font-size: 32px;
         position: absolute;
-        margin: 23vw 20vw;
+        margin: 12vw 40vw;
         color: white;
         letter-spacing: 3px;
         z-index: 1;
@@ -558,23 +683,21 @@ header{
         position: absolute;
         max-width: 100vw;
         width: 100%;
-        height: 1160px;
+        height: 1200px;
         object-fit: cover;
     }
     #img3{
         display: none;
     }
-
 }
-
-    /* BANNER */
+/* BANNER */
     .banner {
         max-width: 100%;
         width: 100vw;
         background-color: $color-primary;
         .banner-description {
-            padding: 1.5rem;
-            font-size: 1vw;
+            padding: 1rem;
+            font-size: 20px;
             font-weight: 700;
             color: #fff;
             text-align: center;
@@ -586,86 +709,4 @@ header{
             display: none;
         }
 }
-
-}
-/* FIN @media screen and (min-width: 1400px)*/
-///
-/// 
-/// 
-
-@media screen and (min-width: 1901px){
-/* HERO */
-    .hero__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    height: 100vh;
-    height: 1150px;
-    h1 {
-        font-size: 15vw;
-        z-index: 2;
-        letter-spacing: .5vw;
-        font-family: 'Engagement' !important;
-        margin: 5rem auto;
-        color: #fff;
-        filter: drop-shadow(1px 1px 20px rgba(249, 248, 176, 0.264));
-        background: linear-gradient(45deg, #000000, #930018, #a4007b, #ff012b, #000000);
-        background-size: 200%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        transition: 4s;
-        animation: h1gradient 2.5s linear infinite;
-        @keyframes h1gradient {
-            to {
-                background-position: 200%;
-            }
-        }
-    }
-    h2{
-        font-size: clamp(1rem, -2.7279rem + 7.6372vw, 2.8rem);
-        position: absolute;
-        margin: 20vw 30vw;
-        color: white;
-        letter-spacing: 7px;
-        z-index: 1;
-    }
-    #img2 {
-        display: none;
-    }
-    #img1{
-        display: block;
-        position: absolute;
-        max-width: 100vw;
-        width: 100%;
-        height: 1150px;
-        object-fit: cover;
-    }
-    #img3{
-        display: none;
-    }
-
-}
-
-    /* BANNER */
-    .banner {
-        max-width: 100%;
-        width: 100vw;
-        background-color: $color-primary;
-        .banner-description {
-            padding: 1.5rem;
-            font-size: 1vw;
-            font-weight: 700;
-            color: #fff;
-            text-align: center;
-            font-family: "Montserrat" !important;
-            letter-spacing: 2vw;
-        }
-        img{
-            max-width: 100%;
-            display: none;
-        }
-}
-
-}
+}   

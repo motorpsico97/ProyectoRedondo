@@ -82,10 +82,11 @@
         .footer__basics {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
             .footer_list-container {
                 .footer__list {
+                    margin: 25px 50px;
                     .footer__item {
                         list-style: none;
                         margin: 20px 0;
@@ -114,18 +115,22 @@
                 }
             }
             .footer__social {
-                @include flex (flex, center, center, column);
+                @include flex (flex, center, flex-start, column);
                 margin: 5vh;
                 a {
-                    font-size: 25px;
+                    font-size: 1rem;
                     color: #ff0000;
                     transition: 0.5s;
                     margin-top: 25px;
+                    text-decoration: none;  
                     i {
                         transition: 0.8s;
                         &:hover {
                             color: #ffffff;
                         }
+                    }
+                    span{
+                        color: #ffffff;
                     }
                 }
             }
@@ -139,7 +144,7 @@
 }
 /* fin @media (min-width: 576px) and (max-width: 780px) */
 @media screen and (min-width: 781px) and (max-width: 1200px){
-    .footer__container {
+.footer__container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -147,10 +152,12 @@
         .footer__basics {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
+            margin-top: 50px;
             .footer_list-container {
                 .footer__list {
+                    margin: 25px 50px;
                     .footer__item {
                         list-style: none;
                         margin: 20px 0;
@@ -161,9 +168,9 @@
                             &:hover {
                                 color: #ff0000;
                             }
-                            i{
-                                margin: 0 10px;
-                            }
+                        }
+                        span{
+                            display: none;
                         }
                     }
                 }
@@ -171,7 +178,7 @@
             .footer__container-logo {
                 img {
                     display: block;
-                    width: 150px;
+                    width: 100px;
                     transition: .6s;
                     &:hover{
                         scale: 1.2
@@ -179,38 +186,32 @@
                 }
             }
             .footer__social {
-                display: flex ;
-                flex-direction: column;
-                align-items: flex-start ;
+                @include flex (flex, center, flex-start, column);
                 margin: 5vh;
                 a {
+                    font-size: 1rem;
                     color: #ff0000;
                     transition: 0.5s;
                     margin-top: 25px;
-                    text-decoration: none;
-                    display: flex ;
-                    align-items: center;
+                    text-decoration: none;  
                     i {
-                        font-size: 25px;
                         transition: 0.8s;
-                        &:hover{
-                        color: #ff0000;
+                        &:hover {
+                            color: #ffffff;
+                        }
                     }
+                    span{
+                        color: #ffffff;
                     }
                 }
             }
         }
         span{
-                font-size: 15px;
-                color: white !important;
+                color: rgb(100, 100, 100);
                 text-align: center;
                 margin: 20px;
-                transition: .6s;
-                &:hover{
-                        color: #ff0000 !important; 
-                    }
             }
-}
+    }
 }
 /* fin @media (min-width: 781px) and (max-width: 1200px) */
 @media screen and (min-width: 1201px) {
@@ -222,7 +223,7 @@
         .footer__basics {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: space-around;
             align-items: center;
             .footer_list-container {
                 .footer__list {
@@ -257,7 +258,6 @@
                 display: flex ;
                 flex-direction: column;
                 align-items: flex-start ;
-                margin: 5vh;
                 a {
                     color: #ff0000;
                     transition: 0.5s;

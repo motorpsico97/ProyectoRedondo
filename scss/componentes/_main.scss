@@ -78,7 +78,7 @@
                 font-size: 1.2rem;
                 margin-bottom: .25rem;
             }
-            .card__profession{
+            .card__date{
                 display: block;
                 font-size: 1rem;
             }
@@ -175,14 +175,17 @@
     h2 {
         padding: 10px;
         position: sticky;
+        max-width: 100vw;
+        width: 100%;
         top: 78px;
         display: flex;
         justify-content: space-between;
-        font-size: 5vw;
+        font-size: 5vw !important;
         font-weight: 600;
         color: #ffff;
         margin-top: 5vh;
         background-color: $color-primary;
+        z-index: 2;
     }
     .grid__container{
             width: 80%;
@@ -219,7 +222,6 @@
                         width: 100%;
                         height: 200px;
                         object-fit: cover;
-
                         transition: 1s;     
                     }
             }
@@ -270,6 +272,7 @@
         color: #ffff !important;
         margin-top: 10vh;
         background-color: $color-primary;
+        z-index: 2;
     }
     .flex__container-discs{
         width: 90%;
@@ -364,7 +367,7 @@
     width: 100% !important;
     h2{
         max-width: 100vw !important;
-        width: 100vw !important;
+        width: 100% !important;
         padding: 10px;
         position: sticky;
         top: 78px;
@@ -876,12 +879,17 @@
     justify-content: start;
     margin: 50px 0;
     h2{
+        position: sticky;
+        max-width: 100vw;
+        width: 100%;
+        top: 78px;
         padding: 10px;
         font-size: 2rem;
         font-weight: 600;
         color: #ffffff;
         margin-top: 5vh;
         background-color: $color-primary;
+        z-index: 2;
     }
     .grid__container{
         display: grid;
@@ -966,6 +974,9 @@
     @include flex(flex, center, start, column);
     gap: 50px;
     h2{
+        position: sticky;
+        top: 78px;
+        z-index: 2;
         max-width: 100%;
         width: 100vw;
         padding: 10px;
@@ -991,7 +1002,7 @@
             a{
                 text-decoration: none;
                 color: $color-primary;
-                font-size: clamp(2rem, -4.6471rem + 15.6863vw, 2.5rem);
+                font-size: clamp(1rem, 1vw + 1.3rem, 2.5rem);
                 order:0 ;
                 grid-row: span 4 / span 4;
                     img{                
@@ -2241,14 +2252,25 @@ main{
         }
         .card__data{
             .card__name{
-                font-size: 1.8rem;
+                font-size: clamp(1.6rem, 1vw + 1rem, 1.8rem);
             }
         }
         .info{
             clip-path: circle(8px at 90% 8%);
             padding: 1.5rem;
-            .info__button{
-                padding: 10px;
+            .info__data{
+                .info__name{
+                    font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem);
+                }
+                .info__button{
+                    padding:5px 10px;
+                }
+                .info__description{
+                    font-size: clamp(.8rem, .8rem, 1rem);
+                }
+                .disc-duration{
+                    font-size: clamp(0.8rem, 1rem, 1.3rem);
+                }
             }
         }
     }
@@ -2637,7 +2659,7 @@ main{
         iframe {
             margin: 10px;
             max-width: 100%;
-            width: 400px;
+            width: 350px;
             border-radius: 10px;
         }
     }
@@ -2961,9 +2983,6 @@ main{
 /* fin page NOTICIAS */
 ///
 /// 
-/*page NEWS*/
-
-/*fin page News*/
 /* page CONTACTO */
 main{
     position: relative;
@@ -3085,13 +3104,24 @@ main{
         }
         .card__data{
             .card__name{
-                font-size: 1.8rem;
+                font-size: clamp(1.25rem, 1vw + 0.5rem, 1.4rem);
             }
         }
         .info{
             clip-path: circle(8px at 90% 8%);
-            .info__button{
-                padding: 10px;
+            .info__data{
+                .info__name{
+                    font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem);
+                }
+                .info__button{
+                    padding:5px 10px;
+                }
+                .info__description{
+                    font-size: clamp(.8rem, .8rem, 1rem);
+                }
+                .disc-duration{
+                    font-size: clamp(0.8rem, 1rem, 1.3rem);
+                }
             }
         }
         .info:hover, .card__clip:hover ~ .info{
@@ -3257,6 +3287,9 @@ main{
 /* fin GULP */
 ///
 /// 
+.buttom_container-home{
+    margin: 150px;
+}
 }/* fin @media screen and (min-width: 1201px)*/
 ///
 /// 
