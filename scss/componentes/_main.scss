@@ -655,6 +655,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    #antecedentes, #inicios, #despegue, #debut,#exitos,#exper,#origen, #miembros{
+            position: sticky;
+            top: 78px;
+            background-color: #ffffff;
+        }
     .menu-lateral {
         background-color: #ffffff00;
         display: block;
@@ -694,6 +699,7 @@
     .section_container {
             max-width: 100vw;
             padding: 20px;
+            text-align: justify;
             h2{
                 font-size: 10vw;
                 text-align: center;
@@ -1337,6 +1343,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    #antecedentes, #inicios, #despegue, #debut,#exitos,#exper,#origen, #miembros{
+            position: sticky;
+            top: 78px;
+            background-color: #ffffff;
+        }
     .menu-lateral {
         background-color: #ffffff00;
         display: block;
@@ -2020,6 +2031,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    #antecedentes, #inicios, #despegue, #debut,#exitos,#exper,#origen, #miembros{
+            position: sticky;
+            top: 78px;
+            background-color: #ffffff;
+        }
     .menu-lateral {
         background-color: #ffffff00;
         display: block;
@@ -2487,6 +2503,11 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 30px;
+    #antecedentes, #inicios, #despegue, #debut,#exitos,#exper,#origen, #miembros{
+            position: sticky;
+            top: 78px;
+            background-color: #ffffff;
+        }
     .menu-lateral {
         display: flex;
         flex-direction: column ;
@@ -2562,14 +2583,10 @@
                     }
             }
             h3{
-                font-size: 2.5rem;
                 font-weight: 600;
                 border-bottom: 1px solid red;
                 padding: 20px 0;
                 margin: 20px 0;
-            }
-            p{
-                font-size: 1.2rem;
             }
             .img-container{
                 display: flex;
@@ -2600,12 +2617,8 @@
                 width: 80%;
                 margin: auto;
                 margin-bottom: 40px;
-                p{
-                    font-size: 16px;
-                }
                 span{
                     font-weight: 600;
-                    font-size: 12px;
                     align-self: flex-end;
                 }
             }
@@ -2613,7 +2626,6 @@
                 width: 600px;
             }
             h4{
-                font-size: 1.5rem;
                 margin: 20px 0;
                 font-weight: 600;
             }
@@ -3289,6 +3301,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    #antecedentes, #inicios, #despegue, #debut,#exitos,#exper,#origen, #miembros{
+            position: sticky;
+            top: 78px;
+            background-color: #ffffff;
+    }
     .menu-lateral {
         margin: auto;
         justify-items: center;
@@ -4110,6 +4127,11 @@
     grid-template-areas: 
     "aside main"   
     ;
+    #antecedentes, #inicios, #despegue, #debut,#exitos,#exper,#origen, #miembros{
+            position: sticky;
+            top: 78px;
+            background-color: #ffffff;
+    }
     .menu-lateral {
         grid-area: aside;
         background-color: #ffffff;
@@ -4712,7 +4734,6 @@ main{
             width: 10%;
             border-radius: 0 10px 10px 0;
             padding: 10px;
-            padding-left: 50px;
             font-weight: 600;
             color: white;
             margin-top: 5vh;
@@ -4828,7 +4849,6 @@ main{
         width: 10%;
         border-radius: 0 10px 10px 0;
         padding: 10px;
-        padding-left: 50px;
         font-weight: 600;
         color: #ffffff;
         margin-top: 5vh;
@@ -5025,6 +5045,11 @@ main{
         width: 80%;
         padding: 50px;
         margin: auto;
+        #antecedentes, #inicios, #despegue, #debut,#exitos,#exper,#origen, #miembros{
+            position: sticky;
+            top: 78px;
+            background-color: #ffffff;
+        }
         .img-section-portada{
             max-width: 90%;
             margin: auto;
@@ -5103,14 +5128,21 @@ main{
                 }
             }
             }          
-            img{
-                max-width: 100%;
-            }
+        img{
+            max-width: 100%;
+        }
         }
     .buttom_container-home{
         display: block;
         grid-column: span 2;
+        margin: 100px;
         font-size: 50px;
+        i {
+            transition: .8s ease;
+            &:hover{
+                color: $color-primary;
+            }
+        }
     }
 }/* fin page HISTORIA */
 ///
@@ -5279,6 +5311,13 @@ main{
     }
     .buttom_container-home{
         margin: 100px;
+        font-size: 50px;
+        i {
+            transition: .8s ease;
+            &:hover{
+                color: $color-primary;
+            }
+        }
     }
 }/* fin page NOTICIAS */
 ///
@@ -5286,13 +5325,14 @@ main{
 /* page CONTACTO */
 .form__container{
     max-width: 80%;
-    width: 80%;
-    margin: 5vh auto;
+    width: 50%;
+    margin: 2vh auto;
     background-color: black;
     padding: 40px;
     color: white;
     border-radius: 10px;
     h2{
+        font-size: 38px;
         color: rgb(255, 255, 255);
         text-align: center;
     }
@@ -5303,14 +5343,14 @@ main{
         align-items: center;
         form{
             legend{
-                color:rgb(150, 0, 0);
+                color:$color-terciary
             }
             input[type="text"], input[type="email"]{
                     width: 350px;
                     margin: 30px 0;
                     background-color: transparent;
                     border: none;
-                    border-bottom: 1px solid red;
+                    border-bottom: 1px solid $color-terciary;
                     border-radius: 5px;
                     color: white;
             }
@@ -5337,7 +5377,7 @@ main{
             }
             .form__container-lista{
                 padding: 15px;
-                color:rgb(103, 0, 0);
+                color:$color-terciary;
                 #lista{
                     font-size: 1rem;
                     margin: 0 15px;
@@ -5352,19 +5392,29 @@ main{
                     border-bottom: 1px solid red;
                     border-top: 1px solid red;
                     border-radius: 5px;
-                    padding: 5px 10px;
+                    padding: 5px 15px;
                     margin: 10px;
                     text-transform: uppercase;
                     transition: 1s;
                     &:hover{
                         background-color: white;
                         color: $color-primary;
-                        scale: 1.2;                        
+                        scale: 1.1;                        
                     }
                 }
             }
         }
     }
+}
+    .buttom_container-home{
+        margin: 100px;
+        font-size: 50px;
+        i {
+            transition: .8s ease;
+            &:hover{
+                color: $color-primary;
+            }
+        }
 }
 /* fin page CONTACTO */
 ///
@@ -5391,17 +5441,17 @@ main{
             clip-path: circle(8px at 90% 8%);
             padding: 1.5rem;
             .info__data{
-                .info__name{
-                    font-size: clamp(1rem, 1vw + 1rem, 1.2rem);
-                }
                 .info__button{
                     padding:5px 10px;
+                }               
+            }
+            .info__social{
+                i{
+                    font-size: 30px;
                 }
-                .info__description{
-                    font-size: clamp(.8rem, 1rem, 1rem);
-                }
-                .disc-duration{
-                    font-size: clamp(0.8rem, 1.2rem, 1.3rem);
+                .info__link{
+                    width: 2.7rem;
+                    height: 2.7rem;
                 }
             }
         }
@@ -5411,7 +5461,14 @@ main{
         }
     }
     .buttom_container-home{
-        margin: 10vw 5vw;
+        margin: 100px;
+        font-size: 50px;
+        i {
+            transition: .8s ease;
+            &:hover{
+                color: $color-primary;
+            }
+        }
     }
 }
 /* FIN page DISCOGRAFIA */
@@ -5439,10 +5496,10 @@ main{
         transition: 1s;
         &:hover{
             background-color: black;
-            padding: 10px;
+            padding: 5px;
             border-radius: 10px 20px;
             color:red;
-            letter-spacing: 5px;
+            letter-spacing: 2px;
         }
     }
     .disc-description{
