@@ -1099,6 +1099,7 @@ header .hero__container #img2 {
   .section__discs .flex__container-discs .container-discs h4 {
     margin: 20px 0;
     color: #5c0000;
+    font-size: 12px;
   }
   .section__discs .flex__container-discs .container-discs p {
     padding: 10px;
